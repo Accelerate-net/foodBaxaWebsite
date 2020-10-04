@@ -39,33 +39,45 @@ img {
 /* font face */
 
 @font-face {
-    font-family: 'geared_slabregular';
-    src: url('../css/font/gearedslab-webfont.eot');
-    src: url('../css/font/gearedslab-webfont.eot?#iefix') format('embedded-opentype'), url('../css/font/gearedslab-webfont.woff') format('woff'), url('../css/font/gearedslab-webfont.ttf') format('truetype'), url('../css/font/gearedslab-webfont.svg#geared_slabregular') format('svg');
+    font-family: "geared_slabregular";
+    src: url("../css/font/gearedslab-webfont.eot");
+    src: url("../css/font/gearedslab-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../css/font/gearedslab-webfont.woff") format("woff"),
+        url("../css/font/gearedslab-webfont.ttf") format("truetype"),
+        url("../css/font/gearedslab-webfont.svg#geared_slabregular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'geared_slabbold';
-    src: url('../css/font/gearedslab-bold-webfont.eot');
-    src: url('../css/font/gearedslab-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../css/font/gearedslab-bold-webfont.woff') format('woff'), url('../css/font/gearedslab-bold-webfont.ttf') format('truetype'), url('../css/font/gearedslab-bold-webfont.svg#geared_slabbold') format('svg');
+    font-family: "geared_slabbold";
+    src: url("../css/font/gearedslab-bold-webfont.eot");
+    src: url("../css/font/gearedslab-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../css/font/gearedslab-bold-webfont.woff") format("woff"),
+        url("../css/font/gearedslab-bold-webfont.ttf") format("truetype"),
+        url("../css/font/gearedslab-bold-webfont.svg#geared_slabbold") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'aleobold';
-    src: url('../css/font/aleo-bold-webfont.eot');
-    src: url('../css/font/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../css/font/aleo-bold-webfont.woff') format('woff'), url('../css/font/aleo-bold-webfont.ttf') format('truetype'), url('../css/font/aleo-bold-webfont.svg#aleobold') format('svg');
+    font-family: "aleobold";
+    src: url("../css/font/aleo-bold-webfont.eot");
+    src: url("../css/font/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../css/font/aleo-bold-webfont.woff") format("woff"),
+        url("../css/font/aleo-bold-webfont.ttf") format("truetype"),
+        url("../css/font/aleo-bold-webfont.svg#aleobold") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'aleoregular';
-    src: url('../css/font/aleo-regular-webfont.eot');
-    src: url('../css/font/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../css/font/aleo-regular-webfont.woff') format('woff'), url('../css/font/aleo-regular-webfont.ttf') format('truetype'), url('../css/font/aleo-regular-webfont.svg#aleoregular') format('svg');
+    font-family: "aleoregular";
+    src: url("../css/font/aleo-regular-webfont.eot");
+    src: url("../css/font/aleo-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../css/font/aleo-regular-webfont.woff") format("woff"),
+        url("../css/font/aleo-regular-webfont.ttf") format("truetype"),
+        url("../css/font/aleo-regular-webfont.svg#aleoregular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -80,6 +92,10 @@ html {
     overflow-y: -moz-scrollbars-vertical;
     overflow-y: scroll;
     -ms-overflow-y: scroll;
+}
+
+body {
+    font-family: "bebas neue";
 }
 
 /* typography */
@@ -139,7 +155,7 @@ hr.dashed-separator {
 }
 
 body {
-    font-family: 'aleoregular';
+    font-family: roboto;
     font-weight: 400;
     color: #fff;
     font-size: 14px;
@@ -161,7 +177,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'aleobold';
+    font-family: "montserrat";
     font-weight: 400;
     color: #fff;
     margin: 0 0 20px 0;
@@ -194,7 +210,7 @@ h4 {
 h5 {
     font-size: 25px;
     line-height: 26px;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     font-weight: 400;
     margin-bottom: 6px;
 }
@@ -217,6 +233,7 @@ p.bigger {
     line-height: 23px;
     margin-bottom: 20px;
     letter-spacing: -0.01em;
+    font-family: montserrat;
 }
 
 p.large {
@@ -225,11 +242,11 @@ p.large {
 }
 
 p a {
-    color: #AD2020;
+    color: #ad2020;
 }
 
 .big {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     color: #fff;
     font-weight: 400;
     font-size: 42px;
@@ -244,7 +261,7 @@ p a {
     min-height: 79px;
     background: transparent url("../images/hdr-1.png") no-repeat top center;
     text-align: center;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     color: #fff;
     font-size: 45px;
@@ -256,7 +273,7 @@ p a {
 .hdr2 {
     margin: 0 0 20px 0;
     text-align: center;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     color: #fff;
     font-size: 42px;
@@ -276,7 +293,7 @@ p a {
     text-align: center;
     font-size: 26px;
     line-height: 26px;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     text-transform: uppercase;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.25);
@@ -293,7 +310,7 @@ p a {
     min-height: 63px;
     background: transparent url("../images/hdr-4.png") no-repeat top center;
     text-align: center;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     color: #fff;
     font-size: 40px;
@@ -306,7 +323,7 @@ p a {
     text-align: center;
     display: block;
     color: #a06e5a;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -326,7 +343,7 @@ p a {
     min-height: 63px;
     background: transparent url("../images/hdr-6.png") no-repeat top center;
     text-align: center;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     color: #fff;
     font-size: 40px;
@@ -349,7 +366,7 @@ p a {
 }
 
 .hdr7 {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 27px;
     line-height: 31px;
     color: #fff;
@@ -373,7 +390,7 @@ p a {
     -moz-border-radius: 5px;
     border-radius: 5px;
     white-space: nowrap;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     text-transform: uppercase;
 }
 
@@ -417,7 +434,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn-primary {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     background: #470707;
     color: #fff;
     border: 1px solid #8a1c1c;
@@ -599,7 +616,7 @@ blockquote.type2:before {
 }
 
 .pretty-table .table th {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-weight: 400;
     font-size: 17px;
     line-height: 18px;
@@ -659,7 +676,7 @@ blockquote.type2:before {
     display: inline-block;
     padding: 14px 22px 14px 22px;
     background: transparent url("../images/priceheader-bg.png") repeat-x center top;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     text-transform: uppercase;
     font-size: 25px;
@@ -720,19 +737,19 @@ blockquote.type2:before {
     display: block;
     font-size: 20px;
     line-height: 34px;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
 }
 
 .priceHeader .price .el_2 {
     font-size: 29px;
     line-height: 29px;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     position: relative;
     top: -0.5em;
 }
 
 .priceHeader .price .el_3 {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 57px;
     line-height: 33px;
 }
@@ -751,19 +768,253 @@ hr.line1 {
 
 /* main menu */
 
-
-.navbar-default .inner .btm {
+/* default css start */
+.container {
     width: 100%;
-    height: 25px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* default css end */
+
+/* navbar regular css start */
+.navbar-area {
+    /* background: rgb(255, 189, 189); */
+    background-color: #fff;
+    /* background-image: url(../images/footer-bg-repeat.jpg); */
+    /* background-size: cover; */
+    /* border-bottom: 1px solid #000; */
+}
+
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    padding: 1rem;
+}
+
+.site-logo img {
+    width: 200px;
+    transform: rotate(10deg);
+}
+
+.site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.site-navbar ul li a {
+    color: #ad2020;
+    padding: 20px;
     display: block;
-    background: transparent url("../images/menu-bg.png") repeat-x center -264px;
-    pointer-events: none;
-    position: absolute;
-    bottom: -23px;
+    font-family: "bebas neue";
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.site-navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* navbar regular css end */
+
+/* nav-toggler css start */
+.nav-toggler {
+    border: 3px solid #ad2020;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+}
+
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #ad2020;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-toggler span:before {
+    content: "";
+    transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+    content: "";
+    transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open span {
+    background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+/* nav-toggler css start */
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 720px;
+    }
+
+    /* navbar css for mobile start */
+    .nav-toggler {
+        display: block;
+    }
+
+    .site-navbar {
+        min-height: 60px;
+    }
+
+    .site-logo img {
+        width: 180px;
+    }
+
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 60px);
+        left: 0;
+        top: 80px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #4f0202;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .site-navbar ul li a {
+        padding: 25px;
+        color: #fff;
+    }
+
+    .site-navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+
+    .intro-area h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    /* navbar css for mobile end */
+}
+
+/* mobile breakpoint end */
+
+#home {
+    background-image: url(../images/background1.jpg);
+    height: 100vh;
+}
+
+#home h1 {
+    color: #fff;
+    /* padding-bottom: 30px; */
+    font-family: "bebas neue";
+    font-size: 10rem;
+    line-height: 9rem;
+    letter-spacing: 2px;
+}
+
+#home h3 {
+    color: #bc7f5c;
+    font-size: 14px;
+    line-height: inherit;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "bebas neue";
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.home__Text {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: left;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.home__Text button {
+    width: 128px;
+    height: 40px;
+    background-color: #500301;
+    border: none;
+    /* border: 1px solid #d0a175; */
+    border-radius: 8px;
+    color: #d0a175;
+    font-family: "bebas neue";
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.home__Text button:focus {
+    /* border: none; */
+    outline: none;
+}
+
+.home__Text button:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        transform: translate(-50%, -10%) rotate(10deg);
+        text-align: center;
+        /* background-color: #eee; */
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .navbar-brand-centered img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .navbar-brand-centered img {
+        width: 200px;
+    }
 }
 
 .address {
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 16px;
     line-height: 19px;
     color: #c69878;
@@ -831,7 +1082,7 @@ hr.line1 {
 }
 
 .tweet_list li {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 17px;
     line-height: 20px;
     color: #fff;
@@ -883,7 +1134,7 @@ hr.line1 {
     text-align: center;
     width: 200px;
     left: -75px;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 14px;
     line-height: 19px;
     color: #fff;
@@ -1373,7 +1624,7 @@ hr.line1 {
 }
 
 .flexslider.flexFade .descArea h4 {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 39px;
     line-height: 43px;
     color: #fff;
@@ -1382,7 +1633,7 @@ hr.line1 {
 }
 
 .flexslider.flexFade .descArea h5 {
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     font-size: 26px;
     line-height: 32px;
 }
@@ -1403,14 +1654,14 @@ hr.line1 {
     color: #fff;
     display: block;
     text-align: center;
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 45px;
     line-height: 45px;
 }
 
 .flexslider.flexFade .price em {
     font-style: normal;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 24px;
     line-height: 24px;
     position: relative;
@@ -1421,7 +1672,7 @@ hr.line1 {
 .flexslider.flexFade .price span {
     position: relative;
     top: -0.7em;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 24px;
     line-height: 24px;
 }
@@ -1484,7 +1735,7 @@ hr.line1 {
     width: 260px;
     margin: 70px auto 90px auto;
     background: #f5f3eb;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     color: #877e7e;
     font-size: 12px;
     line-height: 18px;
@@ -1503,7 +1754,7 @@ hr.line1 {
 }
 
 .prodBox p {
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     color: #877e7e;
     font-size: 12px;
     line-height: 18px;
@@ -1519,7 +1770,7 @@ hr.line1 {
 
 .prodBox h4 {
     color: #635858;
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 25px;
     line-height: 29px;
     margin: 0 0 15px 0;
@@ -1530,7 +1781,7 @@ hr.line1 {
     text-align: center;
     padding: 19px 0 0 0;
     color: #fff;
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 45px;
     line-height: 45px;
     position: absolute;
@@ -1547,7 +1798,7 @@ hr.line1 {
 }
 
 .prodBox .price small {
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 21px;
     line-height: 20px;
     display: block;
@@ -1555,7 +1806,7 @@ hr.line1 {
 
 .prodBox .price em {
     font-style: normal;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 24px;
     line-height: 24px;
     position: relative;
@@ -1566,7 +1817,7 @@ hr.line1 {
 .prodBox .price span {
     position: relative;
     top: -0.7em;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 24px;
     line-height: 24px;
 }
@@ -1625,7 +1876,7 @@ hr.line1 {
     padding: 28px 0 0 0;
     text-transform: uppercase;
     color: #fff;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-size: 32px;
     line-height: 32px;
     position: absolute;
@@ -1647,14 +1898,14 @@ hr.line1 {
     background: #f5f3eb;
     padding: 55px 15px 5px 15px;
     color: #460606;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 12px;
     line-height: 17px;
 }
 
 .menuBox .inner p {
     color: #460606;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     font-size: 12px;
     line-height: 17px;
     margin-bottom: 5px;
@@ -1662,14 +1913,14 @@ hr.line1 {
 
 .menuBox .inner .title {
     display: block;
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 16px;
     line-height: 16px;
     padding: 0 0 5px 0;
 }
 
 .menuBox .inner .price {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     display: block;
     color: #8d1212;
     font-size: 29px;
@@ -1678,7 +1929,7 @@ hr.line1 {
 
 .menuBox .inner .price em {
     font-style: normal;
-    font-family: 'aleoregular';
+    font-family: "aleoregular";
     display: inline-block;
     position: relative;
     top: -0.5em;
@@ -1688,7 +1939,7 @@ hr.line1 {
 }
 
 .menuBox .inner .price span {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     display: inline-block;
     position: relative;
     top: -0.5em;
@@ -1746,8 +1997,10 @@ hr.line1 {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    -webkit-box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px 0px rgba(255, 255, 255, 0.75);
-    box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px 0px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 1px 0px rgba(255, 255, 255, 0.75);
+    box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 1px 0px rgba(255, 255, 255, 0.75);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: transparent;
@@ -1800,7 +2053,7 @@ hr.line1 {
     position: absolute;
     top: 0;
     left: 0;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     font-size: 45px;
     line-height: 45px;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.25);
@@ -1808,7 +2061,7 @@ hr.line1 {
 }
 
 .eventBox .date span {
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-size: 56px;
     line-height: 51px;
     display: block;
@@ -1816,7 +2069,7 @@ hr.line1 {
 
 .eventBox .place {
     display: block;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     color: #e05c28;
     font-size: 33px;
     line-height: 33px;
@@ -1826,7 +2079,7 @@ hr.line1 {
 
 .eventBox .time {
     display: block;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     color: #b58767;
     font-size: 40px;
     line-height: 40px;
@@ -1848,7 +2101,7 @@ hr.line1 {
     padding: 13px 0 0 49px;
     font-size: 31px;
     line-height: 31px;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     color: #fff;
     text-transform: uppercase;
 }
@@ -1921,7 +2174,7 @@ hr.line1 {
     border-top-left-radius: 8px;
     display: block;
     background: #460606;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-size: 32px;
     line-height: 32px;
     text-transform: uppercase;
@@ -1931,7 +2184,7 @@ hr.line1 {
 .personBox .pname {
     padding: 20px 0 8px 0;
     display: block;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     text-transform: uppercase;
     font-size: 24px;
     line-height: 24px;
@@ -2025,7 +2278,7 @@ hr.line1 {
 }
 
 .iconBox h3 {
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     font-weight: 400;
     font-size: 31px;
     line-height: 31px;
@@ -2138,7 +2391,7 @@ hr.line1 {
     float: left;
     width: 175px;
     height: 100%;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     font-weight: 400;
     text-shadow: 1px 2px 0px rgba(5, 3, 5, 0.24);
     font-size: 35px;
@@ -2196,7 +2449,7 @@ hr.line1 {
     width: 159px;
     height: 159px;
     display: inline-block;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     font-size: 42px;
 }
@@ -2376,7 +2629,7 @@ p+.nav-tabs.type2 {
 }
 
 .nav-tabs.type2>li>a {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     -webkit-border-top-left-radius: 4px;
     -moz-border-radius-topleft: 4px;
     border-top-left-radius: 4px;
@@ -2511,10 +2764,6 @@ p+.nav-tabs.type2 {
     color: #fff;
 }
 
-.panel-default>.panel-footer+.panel-collapse .panel-body {
-    border: 0;
-}
-
 p+.panel-group {
     margin-top: 30px;
 }
@@ -2553,7 +2802,7 @@ p+.panel-group {
 
 .blog-main .blog_title {
     margin: 0 0 15px 0;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     font-weight: 400;
     font-size: 35px;
     line-height: 35px;
@@ -2610,7 +2859,7 @@ p+.panel-group {
 .blog-main .meta_box {
     margin: 20px 0 5px 0;
     padding: 3px 0;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     color: #fff;
     font-size: 20px;
     line-height: 21px;
@@ -2690,7 +2939,7 @@ p+.panel-group {
 }
 
 .blog-sidebar .widget>h3 {
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     font-size: 24px;
     line-height: 25px;
@@ -2704,7 +2953,7 @@ p+.panel-group {
 }
 
 .blog-sidebar .widget .tab-content ul>li {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     color: #fff;
     font-size: 14px;
     line-height: 14px;
@@ -2735,7 +2984,7 @@ p+.panel-group {
 .blog-sidebar .widget_rss h3+ul>li,
 .blog-sidebar .widget_links h3+ul>li {
     display: block;
-    font-family: 'aleobold';
+    font-family: "aleobold";
     color: #fff;
     font-size: 16px;
     line-height: 16px;
@@ -2799,7 +3048,7 @@ p+.panel-group {
     margin: 10px 0 5px 0;
     border-radius: 0;
     color: #fff;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
 }
 
 .pagination>li {
@@ -3013,7 +3262,7 @@ p+.panel-group {
     padding: 65px 0 0 0;
     text-transform: uppercase;
     color: #fff;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-size: 32px;
     line-height: 32px;
     position: absolute;
@@ -3058,7 +3307,7 @@ p+.panel-group {
     text-align: center;
     padding: 0 5px 60px 5px;
     text-transform: uppercase;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     color: #c89b7a;
     font-size: 30px;
     line-height: 30px;
@@ -3106,7 +3355,7 @@ div.pp_default .pp_description {
 
 div.pp_default .pp_nav .currentTextHolder {
     color: #fff !important;
-    font-family: 'aleoregular' !important;
+    font-family: "aleoregular" !important;
     font-style: normal;
 }
 
@@ -3132,7 +3381,7 @@ div.pp_default .pp_nav .currentTextHolder {
     box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.25);
     -webkit-transition: none;
     transition: none;
-    font-family: 'aleobold';
+    font-family: "aleobold";
 }
 
 .form-control:-moz-placeholder {
@@ -3154,8 +3403,10 @@ div.pp_default .pp_nav .currentTextHolder {
 .form-control:focus {
     border-color: #333333;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(51, 51, 51, 0.6);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(51, 51, 51, 0.6);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(51, 51, 51, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(51, 51, 51, 0.6);
 }
 
 .form-control.input-sm {
@@ -3172,7 +3423,7 @@ form label {
     color: #bc7f5c;
     font-size: 33px;
     line-height: 33px;
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -3185,7 +3436,7 @@ form label.label-sm {
     margin-bottom: 8px;
 }
 
-input[type=number] {
+input[type="number"] {
     -moz-appearance: textfield;
 }
 
@@ -3209,39 +3460,40 @@ input[type="submit"].btn {
     -moz-border-radius: 5px;
     border-radius: 5px;
     margin: 5px 0 40px 0;
-    background: #72AD45;
+    background: #72ad45;
     color: #fff;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.25);
-    font-family: 'geared_slabbold';
+    font-family: "geared_slabbold";
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
 }
 
 .errorMsg {
-    background: #9D2824;
+    background: #9d2824;
 }
 
 /* footer */
 
-footer {
-    position: relative;
-    z-index: 2;
-    min-height: 434px;
-    padding-top: 15px;
-    padding-bottom: 58px;
-    background: transparent url("../images/footer-bg-repeat.jpg") repeat top center;
-}
+/* footer {
+  position: relative;
+  z-index: 2;
+  min-height: 434px;
+  padding-top: 15px;
+  padding-bottom: 58px;
+  background: transparent url("../images/footer-bg-repeat.jpg") repeat top
+    center;
+} */
 
 footer h4 {
     color: #ad2020;
     text-transform: none;
-    font-family: 'geared_slabregular';
+    font-family: "geared_slabregular";
     margin-top: 35px;
 }
 
 footer p {
-    font-family: 'aleobold';
+    font-family: "aleobold";
     font-size: 17px;
     line-height: 17px;
 }
@@ -3268,10 +3520,6 @@ footer .copyright a {
     color: #c69878;
 }
 
-footer .googleMap {
-    margin: 20px 0;
-}
-
 footer .row>div>img {
     margin: 0 auto;
 }
@@ -3285,7 +3533,7 @@ footer .container {
     z-index: 1;
 }
 
-footer:before {
+/* footer:before {
     content: " ";
     height: 290px;
     background: transparent url("../images/footer-bg.jpg") repeat-x center top;
@@ -3293,7 +3541,7 @@ footer:before {
     left: 0;
     right: 0;
     top: 0;
-}
+} */
 
 footer #toTop {
     display: block;
@@ -3481,7 +3729,6 @@ body.preloader #ct_preloader {
         overflow: hidden;
     }
 
-
     .small-brand {
         max-width: 240px !important;
         margin: 15px auto !important;
@@ -3597,7 +3844,6 @@ body.preloader #ct_preloader {
         background-attachment: fixed !important;
     }
 
-
     footer {
         text-align: center !important;
     }
@@ -3635,8 +3881,6 @@ body.preloader #ct_preloader {
         border: 2px solid rgba(0, 0, 0, 0.3) !important;
         padding: 20px !important;
     }
-
-
 
     .demoContent .text-left,
     .demoContent .text-right {
@@ -3703,8 +3947,6 @@ body.preloader #ct_preloader {
         left: 50% !important;
         margin-left: -199px !important;
     }
-
-
 
     .address {
         width: 140% !important;
@@ -3794,42 +4036,192 @@ body.preloader #ct_preloader {
     }
 }
 
-.navbar-default {
-    background-color: transparent;
-    border: none;
-    padding: 2rem 0;
-    margin-bottom: 10rem;
+.footer-distributed {
+    /* background: #666; */
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
 }
 
-.navbar-default .navbar-nav>li>a {
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Roboto', cursive;
+    margin: 0;
+}
+
+/* .footer-distributed h3 span {
+    color: lightseagreen;
+} */
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+    font-family: 'montserrat';
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
     color: #fff;
-    font-size: 4rem;
-    font-family: 'bebas neue';
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    font-family: 'montserrat';
+
 }
 
-.navbar-brand-centered img {
-    width: 320px;
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
 }
 
-@media screen and (min-width:768px) {
-    .navbar-brand-centered {
-        position: absolute;
-        left: 50%;
+.footer-distributed .footer-center i {
+    background-color: #80150e;
+    color: #ffffff;
+    font-size: 20px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+    font-family: 'montserrat';
+
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #fff;
+    text-decoration: none;
+    ;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    font-family: 'montserrat';
+
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #80150e;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
         display: block;
-        transform: translateX(-50%);
+        width: 100%;
+        margin-bottom: 40px;
         text-align: center;
-        /* background-color: #eee; */
     }
-}
 
-@media screen and (max-width:426px) {
-    .navbar-brand-centered img {
-        width: 250px;
+    .footer-distributed .footer-center i {
+        margin-left: 0;
     }
-}
 
-@media screen and (max-width:376px) {
-    .navbar-brand-centered img {
-        width: 200px;
-    }
 }

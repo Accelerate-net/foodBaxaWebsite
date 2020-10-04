@@ -15,7 +15,12 @@
     <link rel="stylesheet" type="text/css" href="./assets/js/flexslider/css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="./assets/js/prettyPhoto/css/prettyPhoto.css">
     <link rel="stylesheet" type="text/css" href="./assets/js/bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
 
@@ -35,33 +40,30 @@
 <body class="preloader">
     <div id="ct_preloader"></div>
 
-    <nav class="navbar navbar-default bg-transparent" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-brand navbar-brand-centered"><img src="./assets/mirchapur_logo.png" alt="">
-                </div>
-            </div>
+    <header class="header-area">
+        <!-- site-navbar start -->
+        <div class="navbar-area">
+            <div class="container">
+                <nav class="site-navbar">
+                    <!-- site logo -->
+                    <a href="#home" class="site-logo"><img src="./assets/mirchapur_logo.png" alt=""></a>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-brand-centered">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+                    <!-- site menu/nav -->
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#menu">menu</a></li>
+                        <li><a href="#story">about</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+
+                    <!-- nav-toggler for mobile version only -->
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div><!-- navbar-area end -->
+    </header>
 
 
     <!-- *********************** -->
@@ -88,15 +90,24 @@
   <div class="googleMap" data-location="Junipers Blvd. 380 Queens, NY 11379, USA" data-text="Junipers Blvd. 380 Queens, NY 11379, USA" data-height="480" data-offset="-80"></div>
 </div>
 -->
+    <section id="home">
+        <div class="container">
+            <div class="home__Text">
+                <h3>MIRCHAPUR</h3>
+                <h1>UNTOLD FOOD <br> STORIES OF INDIA</h1>
+                <button>CONTACT US</button>
+            </div>
+        </div>
+    </section>
 
     <!-- ***************** -->
     <!-- ** THREE BOXES ** -->
-    <div class="row nomargin threeBoxes" id="location">
+    <!-- <div class="row nomargin threeBoxes" id="location">
         <div class="col-md-4 col-sm-4">
             <div class="full-width-photo" data-image="./assets/images/demo-content/photo-1.jpg"></div>
         </div>
 
-    </div>
+    </div> -->
 
     <div class="bg-1 section" id="menu">
         <div class="inner" data-image="./assets/images/demo-content/background-1.jpg">
@@ -115,19 +126,20 @@
                             <h3 class="hdr2">Big cahuna burger - mia walace style</h3>
                             <h4 class="hdr3">Our Tasty Classic Burger SERVED with an ice cold beer (homebrewed)</h4>
 
-                            <div class="priceHeader">
+                            <!-- <div class="priceHeader">
                                 <span class="lft">
-                                    Fine black angus
+                                    Fine black angus &nbsp;
                                 </span>
                                 <span class="price">
                                     <span class="el_1">just</span>
-                                    <span class="el_2">$</span>
+                                    <span class="el_2">₹
+                                    </span>
                                     <span class="el_3">6</span>
                                 </span>
                                 <span class="rt">
                                     Home breewed beer
                                 </span>
-                            </div>
+                            </div> -->
                         </div>
                     </li>
                     <li>
@@ -137,19 +149,20 @@
                             <h3 class="hdr2">Big cahuna burger - mia walace style</h3>
                             <h4 class="hdr3">Our Tasty Classic Burger SERVED with an ice cold beer (homebrewed)</h4>
 
-                            <div class="priceHeader">
+                            <!-- <div class="priceHeader">
                                 <span class="lft">
-                                    Fine black angus
+                                    Fine black angus &nbsp;
                                 </span>
                                 <span class="price">
                                     <span class="el_1">just</span>
-                                    <span class="el_2">$</span>
+                                    <span class="el_2">₹
+                                    </span>
                                     <span class="el_3">6</span>
                                 </span>
                                 <span class="rt">
                                     Home breewed beer
                                 </span>
-                            </div>
+                            </div> -->
                         </div>
                     </li>
                 </ul>
@@ -174,7 +187,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt
                   </p>
-                  <span class="price"><em>$</em>8<span>99</span></span>
+                  <span class="price"><em>$</em>8</span>
 
                 </div>
                 <div class="roundedImg" data-size="320">
@@ -189,7 +202,7 @@
                   <p>
                     Pellentesque eget augue et ipsum laoreet ultrices eget ut est. Donec tincidunt justo nec lobortis molestie. Duis adipiscing libero ut auctor lacinia.  Quisque a erat vitae libero facilisis pretium.
                   </p>
-                  <span class="price"><em>$</em>9<span>99</span></span>
+                  <span class="price"><em>$</em>9</span>
 
                 </div>
                 <div class="roundedImg" data-size="320">
@@ -238,7 +251,8 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius Lorem ipsum
                                     dolor sit amet, consectetur adipisicing elit, sed do eiu.
                                 </p>
-                                <span class="price"><small>just</small><em>$</em>6</span>
+                                <!-- <span class="price"><small>just</small><em>₹
+                                    </em>6</span> -->
                                 <a href="#" class="btn btn-primary btn-sm">order now!</a>
                             </div>
                         </div>
@@ -254,7 +268,8 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius Lorem,
                                     consectetur adipisicing elit, sed do eiu.
                                 </p>
-                                <span class="price"><small>just</small><em>$</em>4<span>99</span></span>
+                                <!-- <span class="price"><small>just</small><em>₹
+                                    </em>4</span> -->
                                 <a href="#" class="btn btn-primary btn-sm">order now!</a>
                             </div>
                         </div>
@@ -270,7 +285,8 @@
 
                                 <p>Lorem ipsum dolor sit amet, consectetudo eius Lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit, sed do eiu.</p>
-                                <span class="price"><small>just</small><em>$</em>5<span>99</span></span>
+                                <!-- <span class="price"><small>just</small><em>₹
+                                    </em>500</span> -->
                                 <span class="info">* Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                     eiusmod</span>
                                 <a href="#" class="btn btn-primary btn-sm">order now!</a>
@@ -301,11 +317,11 @@
 
             <div class="container">
 
-                <h3 class="hdr1">Who is sitting behind the wheel?</h3>
+                <h3 class="hdr1">ABOUT US</h3>
 
-                <div class="text-center">
+                <!-- <div class="text-center">
                     <img style="width: 400px;" src="./assets/mirchapur_logo.png" alt=" ">
-                </div>
+                </div> -->
 
                 <div class="easyBox flat">
                     <div class="row">
@@ -381,51 +397,62 @@
     <!-- bg-1 -->
 
 
-    <footer>
-        <div class="container">
+    <footer class="footer-distributed">
 
-            <div class="row">
-                <div class="col-md-3">
+        <div class="footer-left">
 
-                    <h4>Contact</h4>
+            <img style="width: 200px;" src="./assets/mirchapur_logo.png" alt="">
 
-                    <p>
-                        Atlantic Avenue 1234,<br><br> New York, NY<br><br> 123 - 456 - 7891<br><br>
+            <p class="footer-links">
+                <a href="#home" class="link-1">HOME</a>
 
-                    </p>
+                <a href="#menu">MENU</a>
 
+                <a href="#story">ABOUT</a>
 
-                </div>
-                <div class="col-md-6">
-                    <img style="width: 400px; margin-top: 2rem;" src="./assets/mirchapur_logo.png" alt=" ">
+                <a href="#contact">CONTACT</a>
+            </p>
 
+            <p class="footer-company-name">MIRCHAPUR © 2020</p>
+        </div>
 
-                    <ul class="bigSocials">
-                        <li class="fb"><a href="#"><img src="./assets/images/social-fb.png" alt="Facebook"></a></li>
-                        <li class="tw"><a href="#"><img src="./assets/images/social-tw.png" alt="Twitter"></a></li>
-                        <li class="gg"><a href="#"><img src="./assets/images/social-gg.png" alt="Google+"></a></li>
-                    </ul>
+        <div class="footer-center">
 
-                    <p class="copyright">© Copyright 2020 <a href="#">Mirchapur</a></p>
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+            </div>
 
+            <div>
+                <i class="fas fa-phone"></i>
+                <p>+1.555.555.5555</p>
+            </div>
 
-                </div>
+            <div>
+                <i class="far fa-envelope"></i>
+                <p><a href="">support@company.com</a></p>
+            </div>
 
-                <div class="col-md-3">
-                    <h4>Hours</h4>
+        </div>
 
-                    <p>
-                        Monday - Friday<br> 11:00 am - 11:00 pm
-                        <br><br> Saturday & Sunday<br> 10:45 am - 5:00 pm
-                        <br><br> Saturday & Sunday<br> 10:45 am - 5:00 pm
-                    </p>
+        <div class="footer-right">
 
-                </div>
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+                vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
 
             </div>
 
         </div>
-        <a href="#" id="toTop"></a>
+
     </footer>
     <!-- / footer -->
 
@@ -458,39 +485,14 @@
     <!-- switcher -->
     <!-- demo -->
     <!-- switcher -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+
     <script src="./assets/demo/js/demo.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/demo/css/demo.css">
 
     <!-- end demo -->
 
     <!-- end switcher -->
-
-
-    <script>
-        function loadScript(e, t) {
-            var a = document.createElement("script");
-            a.readyState ? a.onreadystatechange = function () {
-                ("loaded" == a.readyState || "complete" == a.readyState) && (a.onreadystatechange = null, t())
-            } : a.onload = function () {
-                t()
-            }, a.src = e, document.getElementsByTagName("head")[0].appendChild(a)
-        }
-        var fNewsletter = function () {
-            var e = $("#cf-newsletter-form");
-            e.submit(function () {
-                return $.getJSON("//optimus-prime.createit.pl/newsletter/add", $(this).serialize(),
-                    function () {
-                        e.fadeOut(function () {
-                            $("#cf-newsletter-message").show()
-                        })
-                    }), !1
-            }).find("[name=source]").val($(location).attr("href"))
-        };
-        "undefined" == typeof jQuery ? loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js",
-            function () {
-                fNewsletter()
-            }) : fNewsletter();
-    </script>
 </body>
 
 </html>

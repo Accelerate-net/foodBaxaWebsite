@@ -933,7 +933,8 @@ hr.line1 {
 /* mobile breakpoint end */
 
 #home {
-    background-image: url(../images/background1.jpg);
+    background-image: url(../images/background2.png);
+    background-size: cover;
     height: 100vh;
 }
 

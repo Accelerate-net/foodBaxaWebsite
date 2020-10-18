@@ -905,6 +905,7 @@ header{
 }
 
 @media screen and (max-width: 400px) {
+
     .icons-wrapper-bottom img{
         width: 80px;
         margin: 0;

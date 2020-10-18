@@ -37,7 +37,14 @@ img {
 }
 
 /* font face */
-
+@import url(//db.onlinewebfonts.com/c/59efaeb2099c2d3b622e20d3da405fa8?family=A+Love+of+Thunder);
+@font-face {font-family: "A Love of Thunder"; 
+    src: url("//db.onlinewebfonts.com/t/59efaeb2099c2d3b622e20d3da405fa8.eot"); 
+    src: url("//db.onlinewebfonts.com/t/59efaeb2099c2d3b622e20d3da405fa8.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/59efaeb2099c2d3b622e20d3da405fa8.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/59efaeb2099c2d3b622e20d3da405fa8.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/59efaeb2099c2d3b622e20d3da405fa8.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/59efaeb2099c2d3b622e20d3da405fa8.svg#A Love of Thunder") format("svg"); }
 @font-face {
     font-family: "geared_slabregular";
     src: url("../css/font/gearedslab-webfont.eot");
@@ -89,13 +96,14 @@ img {
 */
 
 html {
-    overflow-y: -moz-scrollbars-vertical;
+    /* overflow-y: -moz-scrollbars-vertical;
     overflow-y: scroll;
-    -ms-overflow-y: scroll;
+    -ms-overflow-y: scroll; */
+    /* scroll-behavior: smooth; */
 }
 
 body {
-    font-family: "bebas neue";
+    font-family: "A Love of Thunder", sans-serif;
 }
 
 /* typography */
@@ -500,83 +508,6 @@ fieldset[disabled] .btn {
     filter: alpha(opacity=100);
 }
 
-/* blockquote */
-
-blockquote {
-    padding: 0;
-    margin: 0 0 20px 0;
-    border: 0;
-}
-
-blockquote p {
-    font-size: 17px;
-    line-height: 21px;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-blockquote h1,
-blockquote h2,
-blockquote h3,
-blockquote h4,
-blockquote h5,
-blockquote h6 {
-    margin-bottom: 12px;
-}
-
-blockquote.type2 {
-    padding-left: 55px;
-}
-
-blockquote.type2:before {
-    font-family: Arial, Helvetica, sans-serif;
-    content: "â€œ";
-    font-size: 142px;
-    height: 0;
-    float: left;
-    position: relative;
-    left: -58px;
-    top: 47px;
-}
-
-/* dropcap */
-
-.dropcap {
-    margin-top: 40px;
-    font-size: 17px;
-    line-height: 21px;
-}
-
-.dropcap:first-letter {
-    font-size: 60px;
-    float: left;
-    padding: 0 0px 2px 0;
-    margin-top: -13px;
-    position: relative;
-}
-
-/* highlight */
-
-.highlight {
-    text-shadow: none;
-    display: inline-block;
-    padding: 1px 4px 1px 4px;
-    margin: 0 2px;
-}
-
-.highlight.type1 {
-    background: #a93636;
-}
-
-.highlight.type2 {
-    background: #460606;
-}
-
-.highlight.type3 {
-    background: #e6e6e6;
-    color: #460606;
-}
-
 /* list with icon */
 
 .list-icons {
@@ -604,72 +535,6 @@ blockquote.type2:before {
     top: 6px;
     left: -16px;
 }
-
-.pretty-table {
-    margin: 10px 0 30px 0;
-}
-
-.pretty-table .table {
-    width: 100%;
-    margin: 0;
-    background: transparent !important;
-}
-
-.pretty-table .table th {
-    font-family: "aleobold";
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 18px;
-}
-
-.pretty-table .table thead>tr>th,
-.pretty-table .table tbody>tr>th,
-.pretty-table .table tfoot>tr>th,
-.pretty-table .table thead>tr>td,
-.pretty-table .table tbody>tr>td,
-.pretty-table .table tfoot>tr>td {
-    padding: 12px;
-    line-height: 15px;
-    vertical-align: top;
-    border-top: 1px solid #222;
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
-    border-left: 1px solid #222;
-    border-left: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.pretty-table .table thead>tr>th:first-child,
-.pretty-table .table tbody>tr>th:first-child,
-.pretty-table .table tfoot>tr>th:first-child,
-.pretty-table .table thead>tr>td:first-child,
-.pretty-table .table tbody>tr>td:first-child,
-.pretty-table .table tfoot>tr>td:first-child {
-    border-left: 0;
-}
-
-.pretty-table .table thead>tr>th {
-    vertical-align: bottom;
-    border-bottom: 1px solid #222;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.pretty-table .table caption+thead tr:first-child th,
-.pretty-table .table colgroup+thead tr:first-child th,
-.pretty-table .table thead:first-child tr:first-child th,
-.pretty-table .table caption+thead tr:first-child td,
-.pretty-table .table colgroup+thead tr:first-child td,
-.pretty-table .table thead:first-child tr:first-child td {
-    border-top: 0;
-}
-
-.pretty-table .table tbody+tbody {
-    border-top: 1px solid #222;
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.pretty-table .table .table {
-    background-color: transparent;
-}
-
 /* priceHeader */
 
 .priceHeader {
@@ -779,12 +644,14 @@ hr.line1 {
 /* default css end */
 
 /* navbar regular css start */
+header{
+    position: absolute;
+    width: 100%;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
 .navbar-area {
-    /* background: rgb(255, 189, 189); */
     background-color: #fff;
-    /* background-image: url(../images/footer-bg-repeat.jpg); */
-    /* background-size: cover; */
-    /* border-bottom: 1px solid #000; */
 }
 
 .site-navbar {
@@ -794,7 +661,7 @@ hr.line1 {
 }
 
 .site-logo {
-    padding: 1rem;
+    padding: 0rem;
 }
 
 .site-logo img {
@@ -807,21 +674,30 @@ hr.line1 {
     padding: 0;
     list-style: none;
     display: flex;
+    z-index: 100;
+}
+
+.site-navbar ul li{
+    border-right: 3px solid #000;
 }
 
 .site-navbar ul li a {
-    color: #ad2020;
-    padding: 20px;
+    color: #000;
+    padding: 5px 20px;
     display: block;
-    font-family: "bebas neue";
-    font-size: 3rem;
+    font-family: "A Love of Thunder";
+    font-size: 2.5rem;
     letter-spacing: 2px;
     text-decoration: none;
     text-transform: uppercase;
 }
 
+.site-navbar ul li:last-child {
+    border-right: none;
+}
+
 .site-navbar ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    color: #8C3026;
 }
 
 /* navbar regular css end */
@@ -871,7 +747,7 @@ hr.line1 {
 /* nav-toggler css start */
 
 /* mobile breakpoint start */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 780px) {
     .container {
         max-width: 720px;
     }
@@ -885,8 +761,12 @@ hr.line1 {
         min-height: 60px;
     }
 
+    .site-logo{
+        padding: 0.5rem;
+    }
+
     .site-logo img {
-        width: 180px;
+        width: 200px;
     }
 
     .site-navbar ul {
@@ -933,84 +813,105 @@ hr.line1 {
 /* mobile breakpoint end */
 
 #home {
-    background-image: url(../images/background2.png);
+    background-image: url(../images/bgmain1.png);
     background-size: cover;
+    background-position: 50% 0;
     height: 100vh;
+}
+
+#home .home__Text{
+    text-align: center;
+    position: relative;
+    top: 140px;
 }
 
 #home h1 {
-    color: #fff;
+    color: #8C3026;
     /* padding-bottom: 30px; */
-    font-family: "bebas neue";
-    font-size: 10rem;
-    line-height: 9rem;
+    font-family: "A Love of Thunder";
+    font-size: 5rem;
     letter-spacing: 2px;
+    margin-bottom: 2rem;
 }
 
 #home h3 {
-    color: #bc7f5c;
-    font-size: 14px;
-    line-height: inherit;
+    color: #000;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin: 0;
-    font-family: "bebas neue";
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-family: "A Love of Thunder";
+    font-size: 4rem;
 }
 
-.home__Text {
+.icons-wrapper{
+    position: relative;
+    height: 500px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+#home .left-icons{
+    position: absolute;
+    top: 35%;
+}
+
+#home .right-icons{
+    position: absolute;
+    top: 35%;
+    right: 0;
+}
+
+#home .left-icons img{
+    width: 120px;
+    margin-bottom: 1.5rem;
+}
+
+#home .left-icons .temp-wrapper img{
+    width: 140px;
+}
+
+#home .right-icons img{
+    width: 120px;
+    margin-bottom: 1.5rem;
+}
+
+.icons-wrapper-bottom{
     display: flex;
+    align-items: center;
     justify-content: center;
-    /* align-items: center; */
-    text-align: left;
-    flex-direction: column;
-    height: 100vh;
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
 }
 
-.home__Text button {
-    width: 128px;
-    height: 40px;
-    background-color: #500301;
-    border: none;
-    /* border: 1px solid #d0a175; */
-    border-radius: 8px;
-    color: #d0a175;
-    font-family: "bebas neue";
-    font-size: 2rem;
-    letter-spacing: 2px;
+.icons-wrapper-bottom img{
+    width: 100px;
+    margin: 0 1rem;
 }
 
-.home__Text button:focus {
-    /* border: none; */
-    outline: none;
+.icons-wrapper-bottom img:nth-of-type(2){
+    width: 120px;
 }
 
-.home__Text button:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-}
-
-@media screen and (min-width: 768px) {
-    .navbar-brand-centered {
-        position: absolute;
-        left: 50%;
-        display: block;
-        transform: translate(-50%, -10%) rotate(10deg);
-        text-align: center;
-        /* background-color: #eee; */
+@media screen and (max-width: 780px) {
+    .icons-wrapper{
+        display: none;
     }
+
+   .icons-wrapper-bottom{
+       display: flex;
+   }
 }
 
-@media screen and (max-width: 426px) {
-    .navbar-brand-centered img {
-        width: 250px;
+@media screen and (max-width: 400px) {
+    .icons-wrapper-bottom img{
+        width: 80px;
+        margin: 0;
     }
-}
 
-@media screen and (max-width: 376px) {
-    .navbar-brand-centered img {
-        width: 200px;
+    .icons-wrapper-bottom img:nth-of-type(2){
+        width: 100px;
     }
 }
 
@@ -2930,117 +2831,6 @@ p+.panel-group {
 
 .commentList .oneComment>.media>.pull-left {
     margin-right: 15px;
-}
-
-.blog-sidebar .widget {
-    border-bottom: 1px dashed #333;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
-    padding: 0 0 20px 0;
-    margin: 0 0 25px 0;
-}
-
-.blog-sidebar .widget>h3 {
-    font-family: "geared_slabbold";
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 25px;
-    margin: 0 0 20px 0;
-}
-
-.blog-sidebar .widget .tab-content ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.blog-sidebar .widget .tab-content ul>li {
-    font-family: "aleobold";
-    color: #fff;
-    font-size: 14px;
-    line-height: 14px;
-    margin: 0 0 15px 0;
-}
-
-.blog-sidebar .widget_archive h3+ul,
-.blog-sidebar .widget_categories h3+ul,
-.blog-sidebar .widget_recent_entries h3+ul,
-.blog-sidebar .widget_recent_comments h3+ul,
-.blog-sidebar .widget_categories h3+ul,
-.blog-sidebar .widget_meta h3+ul,
-.blog-sidebar .widget_pages h3+ul,
-.blog-sidebar .widget_rss h3+ul,
-.blog-sidebar .widget_links h3+ul {
-    margin: 0;
-    padding: 0 0 0 20px;
-    list-style: none;
-}
-
-.blog-sidebar .widget_archive h3+ul>li,
-.blog-sidebar .widget_categories h3+ul>li,
-.blog-sidebar .widget_recent_entries h3+ul>li,
-.blog-sidebar .widget_recent_comments h3+ul>li,
-.blog-sidebar .widget_categories h3+ul>li,
-.blog-sidebar .widget_meta h3+ul>li,
-.blog-sidebar .widget_pages h3+ul>li,
-.blog-sidebar .widget_rss h3+ul>li,
-.blog-sidebar .widget_links h3+ul>li {
-    display: block;
-    font-family: "aleobold";
-    color: #fff;
-    font-size: 16px;
-    line-height: 16px;
-    margin: 0 0 14px 0;
-}
-
-.blog-sidebar .widget_archive h3+ul>li.active,
-.blog-sidebar .widget_categories h3+ul>li.active,
-.blog-sidebar .widget_recent_entries h3+ul>li.active,
-.blog-sidebar .widget_recent_comments h3+ul>li.active,
-.blog-sidebar .widget_categories h3+ul>li.active,
-.blog-sidebar .widget_meta h3+ul>li.active,
-.blog-sidebar .widget_pages h3+ul>li.active,
-.blog-sidebar .widget_rss h3+ul>li.active,
-.blog-sidebar .widget_links h3+ul>li.active {
-    color: #c89b7a;
-}
-
-.blog-sidebar .widget_archive h3+ul>li.active:before,
-.blog-sidebar .widget_categories h3+ul>li.active:before,
-.blog-sidebar .widget_recent_entries h3+ul>li.active:before,
-.blog-sidebar .widget_recent_comments h3+ul>li.active:before,
-.blog-sidebar .widget_categories h3+ul>li.active:before,
-.blog-sidebar .widget_meta h3+ul>li.active:before,
-.blog-sidebar .widget_pages h3+ul>li.active:before,
-.blog-sidebar .widget_rss h3+ul>li.active:before,
-.blog-sidebar .widget_links h3+ul>li.active:before {
-    font-size: 12px;
-    display: inline-block;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\f054";
-    height: 0;
-    float: left;
-    position: relative;
-    left: -20px;
-    top: 2px;
-}
-
-.blog-sidebar .tweet_list li {
-    font-size: 12px;
-    line-height: 20px;
-}
-
-.blog-sidebar .tweet_list li a {
-    color: #444;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.blog-sidebar .tweet_list li .tweet_time a {
-    color: #c89b7a;
 }
 
 .pagination {

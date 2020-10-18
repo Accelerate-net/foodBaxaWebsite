@@ -1713,7 +1713,7 @@ h3 {
 
 .slider_area .single_slider .slider_text h3 {
     color: #fff;
-    background: linear-gradient(to right, rgba(29, 138, 148, 0), rgba(29, 138, 148, 0.5), rgba(29, 138, 148, 0));
+    background: linear-gradient(to right, rgba(29, 138, 148, 0), rgba(29, 138, 148, 1), rgba(29, 138, 148, 0));
     font-family: "Montserrat";
     font-size: 2.2rem;
     padding: 1rem;

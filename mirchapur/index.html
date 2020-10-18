@@ -26,6 +26,8 @@
         <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
         <link href="//db.onlinewebfonts.com/c/59efaeb2099c2d3b622e20d3da405fa8?family=A+Love+of+Thunder"
             rel="stylesheet" type="text/css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
         <!-- modernizr : detect css transition -->
@@ -39,8 +41,8 @@
 
     </head>
 
-    <body class="preloader">
-        <div id="ct_preloader"></div>
+    <body class="">
+        <!-- <div id="ct_preloader"></div> -->
 
         <header class="header-area">
             <!-- site-navbar start -->
@@ -94,24 +96,28 @@
 -->
         <section id="home">
             <div class="container">
-                <div class="home__Text">
+                <div class="home__Text animate__animated animate__fadeInDown">
                     <h1>GET BACK TO THE HISTORY</h1>
                     <h3>OF FOOD AND FLAVOURS</h3>
                 </div>
                 <div class="icons-wrapper">
                     <div class="left-icons">
-                        <div class="mask-wrapper">
+                        <div class="mask-wrapper" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000"
+                            data-aos-delay="500" data-aos-easing="ease-in-out">
                             <img src="./assets/images/icons/mask.png" alt="">
                         </div>
-                        <div class="temp-wrapper">
+                        <div class="temp-wrapper" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000"
+                            data-aos-delay="1000" data-aos-easing="ease-in-out">
                             <img src="./assets/images/icons/tempcheck.png" alt="">
                         </div>
                     </div>
                     <div class="right-icons">
-                        <div class="kitchen-wrapper">
+                        <div class="kitchen-wrapper" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000"
+                            data-aos-delay="500" data-aos-easing="ease-in-out">
                             <img src="./assets/images/icons/kitchen.png" alt="">
                         </div>
-                        <div class="contactless-wrapper">
+                        <div class="contactless-wrapper" data-aos="fade-left" data-aos-once="true"
+                            data-aos-duration="1000" data-aos-delay="1000" data-aos-easing="ease-in-out">
                             <img src="./assets/images/icons/contactless.png" alt="">
                         </div>
                     </div>
@@ -491,7 +497,7 @@
 
 
 
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
         <script src="./assets/js/jquery.min.js"></script>
         <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="./assets/js/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -499,14 +505,19 @@
         <script src="./assets/js/flexslider/jquery.flexslider-min.js"></script>
         <script src="./assets/js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
         <script src="./assets/js/bxslider/jquery.bxslider.min.js"></script>
-        <script src="./assets/twitter/js/jquery.tweet.js"></script>
+        <!-- <script src="./assets/twitter/js/jquery.tweet.js"></script> -->
         <script src="./assets/js/jquery.hoverdir.js"></script>
         <script src="./assets/js/jquery.arctext.js"></script>
         <script src="./assets/js/SmoothScroll.js"></script>
         <script src="./assets/js/jquery.queryloader2.min.js"></script>
         <script src="./assets/js/jquery.placeholder.js"></script>
         <script src="./assets/js/jquery.sticky.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+            integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw=="
+            crossorigin="anonymous"></script>
         <script src="./assets/form/js/form.js"></script>
         <script src="./assets/js/main.js"></script>
 
@@ -515,6 +526,15 @@
         <!-- demo -->
         <!-- switcher -->
         <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                disable: function () {
+                    var maxWidth = 760;
+                    return window.innerWidth < maxWidth;
+                }
+            });
+        </script>
 
         <script src="./assets/demo/js/demo.js"></script>
         <link rel="stylesheet" type="text/css" href="./assets/demo/css/demo.css">

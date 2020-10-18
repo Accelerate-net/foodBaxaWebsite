@@ -1,4 +1,52 @@
 // helper - validate data attr
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.left-icons', {
+    scrollTrigger: {
+        trigger: ".left-icons",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    y: -80,
+    duration:2
+})
+
+gsap.to('.right-icons', {
+    scrollTrigger: {
+        trigger: ".right-icons",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    y: -50,
+    duration:3
+})
+
+gsap.to('.home__Text h1', {
+    scrollTrigger: {
+        trigger: ".home__Text",
+        start: "top",
+        scrub: true,
+        markers: false
+    },
+    y: -20,
+    duration:1
+})
+
+gsap.to('.home__Text h3', {
+    scrollTrigger: {
+        trigger: ".home__Text",
+        start: "top",
+        scrub: true,
+        markers: false
+    },
+    y: -20,
+    duration:1
+})
+
+
+
 function validateDataAttr($attr) {
     "use strict";
     return $attr !== undefined;

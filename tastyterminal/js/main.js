@@ -1,3 +1,132 @@
+window.onload = function() {
+    var tl = gsap.timeline();
+    
+tl.from(".plate_wrapper", {duration: 0.5, opacity: 0}) //notice that there's no semicolon!
+  .from(".blue_plane_wrapper", {duration: 0.5, opacity: 0})
+  .from(".white_plane_wrapper", {duration: 0.5, opacity: 0})
+  .from(".text_wrapper", {duration: 0.5, opacity: 0})
+  .from(".shape1_wrapper", {duration: 0.3, opacity: 0})
+  .from(".shape2_wrapper", {duration: 0.3, opacity: 0})
+  .from(".shape3_wrapper", {duration: 0.3, opacity: 0})
+  .from(".left_shape_wrapper", {duration: 0.3, opacity: 0});
+
+  gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.plate_wrapper', {
+    scrollTrigger: {
+        trigger: ".plate_wrapper",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    rotate: 10,
+    duration:2
+})
+
+gsap.to('.blue_plane_wrapper', {
+    scrollTrigger: {
+        trigger: ".plate_wrapper",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    rotate: 5,
+    x: -40,
+    y: 10,
+    duration:2
+})
+
+gsap.to('.white_plane_wrapper', {
+    scrollTrigger: {
+        trigger: ".plate_wrapper",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    rotate: -10,
+    x: -5,
+    y: -50,
+    duration:2
+})
+
+gsap.to('.shape1_wrapper', {
+    scrollTrigger: {
+        trigger: ".plate_wrapper",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    rotate: -150,
+    y: -50,
+    duration:2
+})
+
+gsap.to('.shape2_wrapper', {
+    scrollTrigger: {
+        trigger: ".plate_wrapper",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    rotate: -150,
+    y: -50,
+    duration:2
+})
+
+gsap.to('.shape3_wrapper', {
+    scrollTrigger: {
+        trigger: ".plate_wrapper",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    rotate: -180,
+    y: -50,
+    duration:2
+})
+
+gsap.to('.left_shape_wrapper', {
+    scrollTrigger: {
+        trigger: ".plate_wrapper",
+        start: "top 30%",
+        scrub: true,
+        markers: false
+    },
+    rotate: -180,
+    y: -50,
+    duration:2
+})
+}
+
+
+const navToggler = document.querySelector('.nav-toggler');
+const navMenu = document.querySelector('.site-navbar ul');
+const navLinks = document.querySelectorAll('.site-navbar a');
+
+allEventListners();
+
+// functions of all event listners
+function allEventListners() {
+// toggler icon click event
+navToggler.addEventListener('click', togglerClick);
+// nav links click event
+navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+}
+
+// togglerClick function
+function togglerClick() {
+navToggler.classList.toggle('toggler-open');
+navMenu.classList.toggle('open');
+}
+
+// navLinkClick function
+function navLinkClick() {
+if (navMenu.classList.contains('open')) {
+    navToggler.click();
+}
+}
+
+
 (function($) {
     "use strict";
     // TOP Menu Sticky
@@ -12,7 +141,7 @@
         }
     });
 
-
+   
 
 
 

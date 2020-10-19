@@ -84,18 +84,6 @@ function navLinkClick() {
 
 
 
-
-function loadScript() {
-    "use strict";
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYTLFgKDw12Y3CAaOdIOidNEQ93gHbwno&callback=initmap';
-    document.body.appendChild(script);
-}
-
-window.onload = loadScript;
-
-
 jQuery(document).ready(function () {
     "use strict";
     // set nav position

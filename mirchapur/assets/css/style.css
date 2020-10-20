@@ -106,6 +106,7 @@ body {
     font-family: "A Love of Thunder", sans-serif;
 }
 
+
 /* typography */
 
 a {
@@ -269,10 +270,10 @@ p a {
     min-height: 79px;
     background: transparent url("../images/hdr-1.png") no-repeat top center;
     text-align: center;
-    font-family: "geared_slabbold";
+    font-family: "A Love of Thunder";
     font-weight: 400;
     color: #fff;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 45px;
     text-transform: uppercase;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.25);
@@ -281,7 +282,7 @@ p a {
 .hdr2 {
     margin: 0 0 20px 0;
     text-align: center;
-    font-family: "geared_slabbold";
+    font-family: "A Love of Thunder";
     font-weight: 400;
     color: #fff;
     font-size: 42px;
@@ -318,7 +319,7 @@ p a {
     min-height: 63px;
     background: transparent url("../images/hdr-4.png") no-repeat top center;
     text-align: center;
-    font-family: "geared_slabbold";
+    font-family: "A Love of Thunder";
     font-weight: 400;
     color: #fff;
     font-size: 40px;
@@ -442,7 +443,7 @@ fieldset[disabled] .btn {
 }
 
 .btn.btn-primary {
-    font-family: "aleobold";
+    font-family: "A Love of Thunder";
     background: #470707;
     color: #fff;
     border: 1px solid #8a1c1c;
@@ -852,12 +853,14 @@ header{
 #home .left-icons{
     position: absolute;
     top: 35%;
+    overflow-x: hidden;
 }
 
 #home .right-icons{
     position: absolute;
     top: 35%;
     right: 0;
+    overflow-x: hidden;
 }
 
 #home .left-icons img{
@@ -916,6 +919,18 @@ header{
     }
 }
 
+#food_center{
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1110px){
+    #food_center{
+        width: 100%;
+        /* margin: 0; */
+    }
+}
+
 .address {
     font-family: "aleoregular";
     font-size: 16px;
@@ -962,56 +977,6 @@ header{
     background-size: cover;
     min-height: 300px;
     margin-right: -1px;
-}
-
-/* tweet list */
-
-.blackboard {
-    background: transparent url("../images/blackboard-bg.jpg") no-repeat top center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 50px;
-    height: 479px;
-    max-width: 450px;
-    overflow: hidden;
-}
-
-.tweet_list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.tweet_list li {
-    font-family: "aleobold";
-    font-size: 17px;
-    line-height: 20px;
-    color: #fff;
-    margin: 0 0 30px 0;
-}
-
-.tweet_list li a {
-    color: #c84249;
-}
-
-.tweet_list li .tweet_time {
-    display: block;
-}
-
-.tweet_list li .tweet_time a {
-    color: #b8b5b5;
-}
-
-/* google map */
-
-.googleMap {
-    min-height: 220px;
-}
-
-.googleMap img {
-    max-width: none;
 }
 
 .customMarker {
@@ -1657,7 +1622,7 @@ header{
 }
 
 .prodBox p {
-    font-family: "aleoregular";
+    font-family: "A Love of Thunder";
     color: #877e7e;
     font-size: 12px;
     line-height: 18px;
@@ -1673,8 +1638,8 @@ header{
 
 .prodBox h4 {
     color: #635858;
-    font-family: "aleobold";
-    font-size: 25px;
+    font-family: "A Love of Thunder";
+    font-size: 20px;
     line-height: 29px;
     margin: 0 0 15px 0;
 }

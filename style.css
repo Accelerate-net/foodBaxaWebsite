@@ -200,6 +200,15 @@ body{
     width: 90px;
 }
 
+@media screen and (max-width: 990px){
+    .tt_logo_wrapper{
+        top:-20px;
+        left: 60px;
+        width: 50%;
+        animation: none;
+    }
+}
+
 @media screen and (max-width: 700px){
     .header_logo{
         width: 120px;
@@ -208,10 +217,14 @@ body{
 
     .twos-wrapper{
         flex-direction: column;
+        padding-top: 8rem;
     }
 
     #division{
-        display: none;
+        height: 2px;
+        margin: 1.5rem 0;
+        width: 80%;
+        background-color: #000;
     }
 
     .mirchapur__wrapper{
@@ -231,7 +244,7 @@ body{
     }
 
     .m_logo_wrapper img{
-        width: 80%;
+        width: 60%;
     }
 
     .m_logo_wrapper{
@@ -240,9 +253,9 @@ body{
 
     .tt_logo_wrapper{
         position: relative;
-        top: -50px;
-        left: 40px;
-        width: 80%;
+        top: -40px;
+        left: 70px;
+        width: 50%;
         animation: none;
     }
 

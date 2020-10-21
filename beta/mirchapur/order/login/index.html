@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Login - Zaitoon Online</title>
+		<title>Login - Mirchapur</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
@@ -67,7 +67,7 @@
 			$('#loading').show();
 			$.ajax({
 					type: 'POST',
-					url: 'https://www.zaitoon.online/services/userlogin.php',
+					url: 'https://accelerateengine.app/foodengine/services/userlogin.php',
 					data: JSON.stringify(val),
 					contentType: "application/json",
 					dataType: 'json',
@@ -119,7 +119,7 @@
       $('#loading').show();
       $.ajax({
           type: 'POST',
-          url: 'https://www.zaitoon.online/services/validatelogin.php',
+          url: 'https://accelerateengine.app/foodengine/services/validatelogin.php',
           data: JSON.stringify(val),
           contentType: "application/json",
           dataType: 'json',

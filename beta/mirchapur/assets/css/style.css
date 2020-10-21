@@ -3982,3 +3982,39 @@ body.preloader #ct_preloader {
     }
 
 }
+
+
+
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.3;
+  }
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.3;
+  }
+}
+
+.orderNowButton{
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    animation: flash 3s infinite;
+    color: #f44336 !important;
+    cursor: pointer !important;
+}

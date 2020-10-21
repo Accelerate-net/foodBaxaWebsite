@@ -394,7 +394,7 @@ angular.module('FullMenu', ['siyfion.sfTypeahead', 'ngCookies'])
 
 
     //Default Outlet = "VELACHERY";
-    var outletcode = "HALROAD";
+    var outletcode = "MIRCHAPUR";
     if(localStorage.getItem("outletInfo") != null){
     	if(JSON.parse(localStorage.getItem("outletInfo"))){
       		outletcode = JSON.parse(localStorage.getItem("outletInfo")).outlet;

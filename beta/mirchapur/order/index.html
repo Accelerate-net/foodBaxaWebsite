@@ -354,11 +354,11 @@ html {
     function checkStatus(){      
     
       //Check the live status of outlet (only if location is set)
-      var cached_outlet = "HALROAD";
+      var cached_outlet = "MIRCHAPUR";
       if(localStorage.getItem("outletInfo") != null){      
       		
       		var mytemp = JSON.parse(localStorage.getItem('outletInfo')) || [];
-      		cached_outlet = mytemp.outlet? mytemp.outlet: "HALROAD";
+      		cached_outlet = mytemp.outlet? mytemp.outlet: "MIRCHAPUR";
       	     	
 	      	$.get("https://accelerateengine.app/foodengine/services/getoutletstatus.php?outlet="+cached_outlet, function(data){
 	          var temp = JSON.parse(data);

@@ -9,7 +9,7 @@ angular.module('analyticsApp', ['ngCookies'])
   .controller('analyticsController', function($scope, $http, $interval, $cookies) {
 
     //Check if logged in
-    if($cookies.get("zaitoonAdmin")){
+    if($cookies.get("accelerateAdminCookie")){
       $scope.isLoggedIn = true;
     }
     else{
@@ -19,8 +19,8 @@ angular.module('analyticsApp', ['ngCookies'])
 
     //Logout function
     $scope.logoutNow = function(){
-      if($cookies.get("zaitoonAdmin")){
-        $cookies.remove("zaitoonAdmin");
+      if($cookies.get("accelerateAdminCookie")){
+        $cookies.remove("accelerateAdminCookie");
         window.location = "adminlogin.html";
       }
     }
@@ -32,7 +32,7 @@ angular.module('analyticsApp', ['ngCookies'])
       $scope.sales = "";
 
       var data = {};
-      data.token = $cookies.get("zaitoonAdmin");
+      data.token = $cookies.get("accelerateAdminCookie");
       $http({
         method  : 'POST',
         url     : 'https://accelerateengine.app/foodengine/services/analyticssales.php',
@@ -46,7 +46,7 @@ angular.module('analyticsApp', ['ngCookies'])
 
         //Refresh Badge Counts
         var admin_data = {};
-        admin_data.token = $cookies.get("zaitoonAdmin");
+        admin_data.token = $cookies.get("accelerateAdminCookie");
         $http({
           method  : 'POST',
           url     : 'https://accelerateengine.app/foodengine/services/fetchbadgecounts.php',

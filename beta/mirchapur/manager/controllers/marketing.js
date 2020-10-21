@@ -9,7 +9,7 @@ angular.module('marketingApp', ['ngCookies'])
   .controller('marketingController', function($scope, $http, $interval, $cookies) {
 
     //Check if logged in
-    if($cookies.get("zaitoonAdmin")){
+    if($cookies.get("accelerateAdminCookie")){
       $scope.isLoggedIn = true;
     }
     else{
@@ -19,8 +19,8 @@ angular.module('marketingApp', ['ngCookies'])
 
     //Logout function
     $scope.logoutNow = function(){
-      if($cookies.get("zaitoonAdmin")){
-        $cookies.remove("zaitoonAdmin");
+      if($cookies.get("accelerateAdminCookie")){
+        $cookies.remove("accelerateAdminCookie");
         window.location = "adminlogin.html";
       }
     }
@@ -99,7 +99,7 @@ angular.module('marketingApp', ['ngCookies'])
 	      	var co_data = {};
 	      	co_data.type = type;
 	      	co_data.page = pageid - 1;
-	        co_data.token = $cookies.get("zaitoonAdmin");
+	        co_data.token = $cookies.get("accelerateAdminCookie");
 	        $http({
 	          method  : 'POST',
 	          url     : 'https://accelerateengine.app/foodengine/services/fetchmarketingcontent.php',
@@ -284,7 +284,7 @@ angular.module('marketingApp', ['ngCookies'])
 		var co_data = {};
 	      	co_data.type = $scope.marketingType;
 	      	co_data.id = req_id;
-	        co_data.token = $cookies.get("zaitoonAdmin");
+	        co_data.token = $cookies.get("accelerateAdminCookie");
 
 	        $http({
 	          method  : 'POST',
@@ -421,7 +421,7 @@ angular.module('marketingApp', ['ngCookies'])
 		      		
 		      		var data = {};
 		      		data.type = "coupon";
-		        	data.token = $cookies.get("zaitoonAdmin");
+		        	data.token = $cookies.get("accelerateAdminCookie");
 		        	data.code = $scope.addNewContent.code;
 		        	data.brief = $scope.addNewContent.brief;
 		        	data.expiry = myExpiryDate;   
@@ -473,7 +473,7 @@ angular.module('marketingApp', ['ngCookies'])
 		      		
 		      		var data = {};
 		      		data.type = "promotion";
-		        	data.token = $cookies.get("zaitoonAdmin");
+		        	data.token = $cookies.get("accelerateAdminCookie");
 		        	data.brief = $scope.addNewContent.brief;
 		        	data.sub = $scope.addNewContent.offer ? 'offer' : 'promotion';
 		        	data.expiry = myExpiryDate;   
@@ -529,7 +529,7 @@ angular.module('marketingApp', ['ngCookies'])
 		      		
 		      		var data = {};
 		      		data.type = "combo";
-		        	data.token = $cookies.get("zaitoonAdmin");
+		        	data.token = $cookies.get("accelerateAdminCookie");
 		        	data.brief = $scope.addNewContent.brief;
 		        	data.name = $scope.addNewContent.name;
 		        	data.price = $scope.addNewContent.price;
@@ -565,7 +565,7 @@ angular.module('marketingApp', ['ngCookies'])
 
          //Refresh Badge Counts
         var admin_data = {};
-        admin_data.token = $cookies.get("zaitoonAdmin");
+        admin_data.token = $cookies.get("accelerateAdminCookie");
         $http({
           method  : 'POST',
           url     : 'https://accelerateengine.app/foodengine/services/fetchbadgecounts.php',

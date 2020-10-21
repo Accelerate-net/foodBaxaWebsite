@@ -9,7 +9,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
   .controller('helpdeskController', function($scope, $http, $interval, $cookies) {
 
     //Check if logged in
-    if($cookies.get("zaitoonAdmin")){
+    if($cookies.get("accelerateAdminCookie")){
       $scope.isLoggedIn = true;
     }
     else{
@@ -19,8 +19,8 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
 
     //Logout function
     $scope.logoutNow = function(){
-      if($cookies.get("zaitoonAdmin")){
-        $cookies.remove("zaitoonAdmin");
+      if($cookies.get("accelerateAdminCookie")){
+        $cookies.remove("accelerateAdminCookie");
         window.location = "adminlogin.html";
       }
     }
@@ -66,7 +66,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
        	  $scope.currentPage = pageId;
        	  
           var data = {};
-          data.token = $cookies.get("zaitoonAdmin");
+          data.token = $cookies.get("accelerateAdminCookie");
           data.id = pageId-1;
 	  if($scope.isFilterRequested){
 	  	data.searchkey = $scope.searchKey.value;
@@ -148,7 +148,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
         	$scope.isMoreLeft = true;
         	
 	          var data = {};
-	          data.token = $cookies.get("zaitoonAdmin");
+	          data.token = $cookies.get("accelerateAdminCookie");
 	          data.key = userMobile;
 	          data.id = 0;
 	
@@ -185,7 +185,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
       $scope.loadMore = function(userMobile){
         $scope.limiter = $scope.limiter + 3;
         var data = {};
-        data.token = $cookies.get("zaitoonAdmin");
+        data.token = $cookies.get("accelerateAdminCookie");
         data.key = userMobile;
         data.id = $scope.limiter;      
 
@@ -241,7 +241,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
         $scope.openReplyWindow = function(cont, type){
         	$scope.replyContent = cont;
         	$scope.trailContent = '\nThis mail is sent in response to the query you posted at '+$scope.replyContent.date+'\n<i><b>'+$scope.replyContent.comment+'</b></i>\n<span style="font-size: 10px">'+$scope.replyContent.userName+' | '+$scope.replyContent.userMobile+' | Ref. ID <b>'+$scope.replyContent.id+'</b> </span>\n\n'+
-        	'<div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><i style="font-size:12.8px"><font color="#999999">Thanks and Regards,</font></i><div style="font-size:12.8px"><font color="#999999"><i><br></i></font><div><div><font face="tahoma, sans-serif" color="#000000"><b>Mirchapur Customer Support</b></font></div><div><font color="#000000" face="tahoma, sans-serif">Mirchapur</font><br></div><div><font face="tahoma, sans-serif" color="#999999"><a href="http://www.zaitoon.online" target="_blank">www.zaitoon.online</a></font></div><div><br></div><div><br></div><div><br></div><div><b><img src="https://ci6.googleusercontent.com/proxy/oplDPYra6ukt8AZTG5UJ892dWrYb5IzTGWV0LWrKLSAM8TMjIKMuPVfEO748AlF_E6Wse7GTzzjm8XExs0wB7tyOeiuPXBhbOdr_nGD8JkzAQ4cgj2s=s0-d-e1-ft#https://www.zaitoon.online/assets/images/elements/email_logo.png"><br></b></div><div><div><b style="color:rgb(224,102,102);font-family:tahoma,sans-serif;font-size:small">Mirchapur&nbsp;</b><font color="#666666" size="1"><b><br></b></font></div><div><font color="#666666" size="1"><b>Chennai - Madurai - Bangalore - Qatar</b></font></div></div><div style="font-size:12.8px"><font color="#e06666"><br></font></div><div style="font-size:12.8px"><span style="font-size:12.8px"><b><font color="#a64d79">Ph: +91 72999 29979</font></b></span><font color="#e06666"><br></font></div><div style="font-size:12.8px"><font color="#999999">www.zaitoon.restaurant | hello@zaitoon.restaurant</font></div><div><font color="#999999"><font size="1">362, Velachery Tambaram Main Road, Velachery, Chennai - 42</font></font></div></div></div></div></div>';
+        	'<div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><i style="font-size:12.8px"><font color="#999999">Thanks and Regards,</font></i><div style="font-size:12.8px"><font color="#999999"><i><br></i></font><div><div><font face="tahoma, sans-serif" color="#000000"><b>Mirchapur Customer Support</b></font></div><div><font color="#000000" face="tahoma, sans-serif">Mirchapur</font><br></div><div><font face="tahoma, sans-serif" color="#999999"><a href="http://www.foodbaxa.com" target="_blank">www.foodbaxa.com</a></font></div><div><br></div><div><br></div><div><br></div><div><b><img src="https://ci6.googleusercontent.com/proxy/oplDPYra6ukt8AZTG5UJ892dWrYb5IzTGWV0LWrKLSAM8TMjIKMuPVfEO748AlF_E6Wse7GTzzjm8XExs0wB7tyOeiuPXBhbOdr_nGD8JkzAQ4cgj2s=s0-d-e1-ft#https://foodbaxa.com/mirchapur/order/assets/images/elements/email_logo.png"><br></b></div><div><div><b style="color:rgb(224,102,102);font-family:tahoma,sans-serif;font-size:small">Mirchapur&nbsp;</b><font color="#666666" size="1"><b><br></b></font></div><div><font color="#666666" size="1"><b>Chennai - Madurai - Bangalore - Qatar</b></font></div></div><div style="font-size:12.8px"><font color="#e06666"><br></font></div><div style="font-size:12.8px"><span style="font-size:12.8px"><b><font color="#a64d79">Ph: +91 72999 29979</font></b></span><font color="#e06666"><br></font></div><div style="font-size:12.8px"><font color="#999999">www.foodbaxa.com | hello@foodbaxa.com</font></div><div><font color="#999999"><font size="1">B-80/1, 2nd Floor, Mayapuri Industrial Area Phase 1, New Delhi 110064</font></font></div></div></div></div></div>';
 
         	
         	if($scope.replyContent.isRefund){
@@ -253,7 +253,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
 			    case "REPLY_ORDER_QUERY":
 			    {
 	        		$scope.replyContent.replySubject = "Hello from Mirchapur";
-	        		$scope.replyContent.replyMessage = "Dear "+$scope.replyContent.userName+",\n\nThank you for writing to us. Please contact the outlet manager directly for updates on your orders. You can find the contact numbers from here - https://www.zaitoon.online/home/index.html#reach\n\nFor any further assistance, you can drop us a mail at care@zaitoon.online";
+	        		$scope.replyContent.replyMessage = "Dear "+$scope.replyContent.userName+",\n\nThank you for writing to us. Please contact the outlet manager directly for updates on your orders. You can find the contact numbers from here - https://www.mirchapur.com\n\nFor any further assistance, you can drop us a mail at hello@foodbaxa.com";
 	        		break; 
 			    }
 			    case "REPLY_DELAYED_ORDER":
@@ -299,7 +299,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
         
         $scope.markSpam = function(uid){		
 		var data = {};
-		data.token = $cookies.get("zaitoonAdmin");	
+		data.token = $cookies.get("accelerateAdminCookie");	
 		data.id = uid;	
 
 		 $http({
@@ -336,7 +336,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
 		$scope.isReplyRequested = false;		
 		
 		var mydata = {};
-		mydata.token = $cookies.get("zaitoonAdmin");	
+		mydata.token = $cookies.get("accelerateAdminCookie");	
 		mydata.id = $scope.displayContent.id;	
 		mydata.replyText = $scope.replyContent.replyMessage;
 		mydata.replySubject = $scope.replyContent.replySubject;
@@ -370,7 +370,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
 	         		  var sendingText = mydata.replyText +'<hr>'+ $scope.trailContent
 				  var message = sendingText.replace(new RegExp('\n','g'), '<br/>');
 				  var headers_obj =  {
-				      'From': 'Mirchapur Care <care@zaitoon.online>',
+				      'From': 'Mirchapur Care <hello@foodbaxa.com>',
 				      'To': mydata.replyEmail,
 				      'Subject': mydata.replySubject,
 				      'Content-Type': 'text/html; charset="UTF-8"',
@@ -428,7 +428,7 @@ angular.module('helpdeskApp', ['ngCookies', 'ngSanitize'])
         
         //Refresh Badge Counts
         var admin_data = {};
-        admin_data.token = $cookies.get("zaitoonAdmin");
+        admin_data.token = $cookies.get("accelerateAdminCookie");
         $http({
           method  : 'POST',
           url     : 'https://accelerateengine.app/foodengine/services/fetchbadgecounts.php',

@@ -8,7 +8,7 @@ angular.module('StandardMenuApp', ['ngCookies'])
   .controller('standardMenuController', function($scope, $http, $interval, $cookies) {
 
     //Check if logged in
-    if($cookies.get("zaitoonAdmin")){
+    if($cookies.get("accelerateAdminCookie")){
       $scope.isLoggedIn = true;
     }
     else{
@@ -19,8 +19,8 @@ angular.module('StandardMenuApp', ['ngCookies'])
 
     //Logout function
     $scope.logoutNow = function(){
-      if($cookies.get("zaitoonAdmin")){
-        $cookies.remove("zaitoonAdmin");
+      if($cookies.get("accelerateAdminCookie")){
+        $cookies.remove("accelerateAdminCookie");
         window.location = "adminlogin.html";
       }
     }
@@ -45,7 +45,7 @@ angular.module('StandardMenuApp', ['ngCookies'])
 
       $scope.outletCode = localStorage.getItem("branch");
 
-      $http.get("https://accelerateengine.app/foodengine/services/specialfetchstandardmenu.php?token="+encodeURIComponent($cookies.get("zaitoonAdmin"))).then(function(response) {
+      $http.get("https://accelerateengine.app/foodengine/services/specialfetchstandardmenu.php?token="+encodeURIComponent($cookies.get("accelerateAdminCookie"))).then(function(response) {
           $scope.menu = response.data;
       });
 
@@ -65,7 +65,7 @@ angular.module('StandardMenuApp', ['ngCookies'])
       }
 
       $scope.initializeMenu = function(){
-        $http.get("https://accelerateengine.app/foodengine/services/specialfetchstandardmenu.php?token="+encodeURIComponent($cookies.get("zaitoonAdmin"))).then(function(response) {
+        $http.get("https://accelerateengine.app/foodengine/services/specialfetchstandardmenu.php?token="+encodeURIComponent($cookies.get("accelerateAdminCookie"))).then(function(response) {
             $scope.menu = response.data;
         });
       }
@@ -73,7 +73,7 @@ angular.module('StandardMenuApp', ['ngCookies'])
       
       $scope.reinitialiseCuisineItems = function(cuisineCode){
       
-	      $http.get("https://accelerateengine.app/foodengine/services/specialfetchstandardmenu.php?token="+encodeURIComponent($cookies.get("zaitoonAdmin"))).then(function(response) {
+	      $http.get("https://accelerateengine.app/foodengine/services/specialfetchstandardmenu.php?token="+encodeURIComponent($cookies.get("accelerateAdminCookie"))).then(function(response) {
 	            	$scope.menu = response.data;
 	            
 	            	var i = 0;
@@ -101,7 +101,7 @@ angular.module('StandardMenuApp', ['ngCookies'])
         $scope.backup_original_photo = "";
 
         var data = {};
-        data.token = $cookies.get("zaitoonAdmin");
+        data.token = $cookies.get("accelerateAdminCookie");
         data.code = item_code;
         
         $scope.showToast('<i class="fa fa-spinner fa-pulse fa-3x fa-fw" style="font-size: 100%"></i> Loading');
@@ -146,7 +146,7 @@ angular.module('StandardMenuApp', ['ngCookies'])
       $scope.initialiseCategories = function(){
         
         var data = {};
-        data.token = $cookies.get("zaitoonAdmin");
+        data.token = $cookies.get("accelerateAdminCookie");
         
         $http({
           method  : 'POST',
@@ -685,7 +685,7 @@ angular.module('StandardMenuApp', ['ngCookies'])
 		
 		//Everything is fine --> POST TO SERVER
 		  var data = $scope.standardisationContent;
-	          data.token = $cookies.get("zaitoonAdmin");
+	          data.token = $cookies.get("accelerateAdminCookie");
 	          data.itemCodeOriginal = $scope.backup_original_item_code;
 	          data.imageDataOriginal = $scope.backup_original_photo;
 	          

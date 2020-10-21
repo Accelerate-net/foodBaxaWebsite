@@ -8,7 +8,7 @@ angular.module('MenuApp', ['ngCookies'])
   .controller('menuController', function($scope, $http, $interval, $cookies) {
 
     //Check if logged in
-    if($cookies.get("zaitoonAdmin")){
+    if($cookies.get("accelerateAdminCookie")){
       $scope.isLoggedIn = true;
     }
     else{
@@ -19,15 +19,15 @@ angular.module('MenuApp', ['ngCookies'])
 
     //Logout function
     $scope.logoutNow = function(){
-      if($cookies.get("zaitoonAdmin")){
-        $cookies.remove("zaitoonAdmin");
+      if($cookies.get("accelerateAdminCookie")){
+        $cookies.remove("accelerateAdminCookie");
         window.location = "adminlogin.html";
       }
     }
 
       $scope.outletCode = localStorage.getItem("branch");
 
-      $http.get("https://accelerateengine.app/foodengine/services/fetchmenuwebadmin.php?token="+encodeURIComponent($cookies.get("zaitoonAdmin"))).then(function(response) {
+      $http.get("https://accelerateengine.app/foodengine/services/fetchmenuwebadmin.php?token="+encodeURIComponent($cookies.get("accelerateAdminCookie"))).then(function(response) {
           $scope.menu = response.data;
       });
 
@@ -47,7 +47,7 @@ angular.module('MenuApp', ['ngCookies'])
       }
 
       $scope.initializeMenu = function(){
-        $http.get("https://accelerateengine.app/foodengine/services/fetchmenuwebadmin.php?token="+encodeURIComponent($cookies.get("zaitoonAdmin"))).then(function(response) {
+        $http.get("https://accelerateengine.app/foodengine/services/fetchmenuwebadmin.php?token="+encodeURIComponent($cookies.get("accelerateAdminCookie"))).then(function(response) {
             $scope.menu = response.data;
         });
       }
@@ -55,7 +55,7 @@ angular.module('MenuApp', ['ngCookies'])
 
       $scope.markAllAvail = function(cuisine){
         var data = {};
-        data.token = $cookies.get("zaitoonAdmin");
+        data.token = $cookies.get("accelerateAdminCookie");
         data.cuisine = cuisine;
         $http({
           method  : 'POST',
@@ -74,7 +74,7 @@ angular.module('MenuApp', ['ngCookies'])
       $scope.resetAvail = function(id, status){
         if(!status){
           var data = {};
-          data.token = $cookies.get("zaitoonAdmin");
+          data.token = $cookies.get("accelerateAdminCookie");
           data.code = id;
           //console.log (id);
           data.status = 1;
@@ -91,7 +91,7 @@ angular.module('MenuApp', ['ngCookies'])
         else
         {
           var data = {};
-          data.token = $cookies.get("zaitoonAdmin");
+          data.token = $cookies.get("accelerateAdminCookie");
           data.code = id;
           data.status = 0;
           $http({
@@ -109,7 +109,7 @@ angular.module('MenuApp', ['ngCookies'])
 
        //Refresh Badge Counts
         var admin_data = {};
-        admin_data.token = $cookies.get("zaitoonAdmin");
+        admin_data.token = $cookies.get("accelerateAdminCookie");
         $http({
           method  : 'POST',
           url     : 'https://accelerateengine.app/foodengine/services/fetchbadgecounts.php',

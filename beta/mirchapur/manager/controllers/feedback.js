@@ -9,7 +9,7 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
   .controller('feedbackController', function($scope, $http, $interval, $cookies) {
 
     //Check if logged in
-    if($cookies.get("zaitoonAdmin")){
+    if($cookies.get("accelerateAdminCookie")){
       $scope.isLoggedIn = true;
     }
     else{
@@ -19,8 +19,8 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
 
     //Logout function
     $scope.logoutNow = function(){
-      if($cookies.get("zaitoonAdmin")){
-        $cookies.remove("zaitoonAdmin");
+      if($cookies.get("accelerateAdminCookie")){
+        $cookies.remove("accelerateAdminCookie");
         window.location = "adminlogin.html";
       }
     }
@@ -32,7 +32,7 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
 
     $("#feedbackLoader").addClass("smallLoading");
     var data = {};
-    data.token = $cookies.get("zaitoonAdmin");
+    data.token = $cookies.get("accelerateAdminCookie");
     $http({
       method  : 'POST',
       url     : 'https://accelerateengine.app/foodengine/services/fetchfeedbackfigures.php',
@@ -242,7 +242,7 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
 	$scope.init = function(){
 	
 	      var data = {};
-	      data.token = $cookies.get("zaitoonAdmin");
+	      data.token = $cookies.get("accelerateAdminCookie");
 	      data.id = 0;
 	      data.filter = $scope.filterMode;
     	      data.isFilter = $scope.isFilterApplied? 1 : 0;
@@ -319,7 +319,7 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
        $scope.loadMore = function() {
           $scope.limiter = $scope.limiter + 5;
           var data = {};
-          data.token = $cookies.get("zaitoonAdmin");
+          data.token = $cookies.get("accelerateAdminCookie");
           data.id = $scope.limiter;
           
           data.filter = $scope.filterMode;
@@ -361,7 +361,7 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
 			    case "REPLY_FOOD_QUALITY":
 			    {	  
 			    	$scope.replySubject = "Feedback on #"+feed.orderID+" | Thank you for letting us know";     		
-	        		$scope.replyMessage = "Dear "+feed.userName+",\n\nYou rated us "+feed.feedback.rating+" out of 5 at "+feed.time+" on your recent order #"+feed.orderID+" and commented that:\n"+feed.feedback.comment+"\n\nThank you for taking your time to provide us with your valuable feedback. Please accept our sincere apologies for your disappointment with the quality of food delivered to you. We never compromise on the quality of food served to our customers. We have noted down your feedback and immediate measures will be taken in order to ensure that the same will not be repeated.\n\nPlease contact the outlet manager immediately in case you feel any quality related issues. You can find the contact numbers from here - https://www.zaitoon.online/home/index.html#reach\n\nKindly contact customer support (care@zaitoon.online) for any further concerns you might have."; 
+	        		$scope.replyMessage = "Dear "+feed.userName+",\n\nYou rated us "+feed.feedback.rating+" out of 5 at "+feed.time+" on your recent order #"+feed.orderID+" and commented that:\n"+feed.feedback.comment+"\n\nThank you for taking your time to provide us with your valuable feedback. Please accept our sincere apologies for your disappointment with the quality of food delivered to you. We never compromise on the quality of food served to our customers. We have noted down your feedback and immediate measures will be taken in order to ensure that the same will not be repeated.\n\nPlease contact the outlet manager immediately in case you feel any quality related issues. You can find the contact numbers from here - https://www.mirchapur.com\n\nKindly contact customer support (hello@foodbaxa.com) for any further concerns you might have."; 
 	        		break; 
 			    }
 			    case "REPLY_DELAYED_ORDER":
@@ -405,7 +405,7 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
         $scope.sendResponse = function(){		
 		
 		var mydata = {};
-		mydata.token = $cookies.get("zaitoonAdmin");	
+		mydata.token = $cookies.get("accelerateAdminCookie");	
 		mydata.id = $scope.replyOrder;	
 					  
 		$scope.submitToServer = function(){
@@ -427,12 +427,12 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
 	        }
 	        
 	         		  //Send Mail
-	         		  var signature_template = '<div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><i style="font-size:12.8px"><font color="#999999">Thanks and Regards,</font></i><div style="font-size:12.8px"><font color="#999999"><i><br></i></font><div><div><font face="tahoma, sans-serif" color="#000000"><b>Mirchapur Customer Support</b></font></div><div><font color="#000000" face="tahoma, sans-serif">Mirchapur</font><br></div><div><font face="tahoma, sans-serif" color="#999999"><a href="http://www.zaitoon.online" target="_blank">www.zaitoon.online</a></font></div><div><br></div><div><br></div><div><br></div><div><b><img src="https://ci6.googleusercontent.com/proxy/oplDPYra6ukt8AZTG5UJ892dWrYb5IzTGWV0LWrKLSAM8TMjIKMuPVfEO748AlF_E6Wse7GTzzjm8XExs0wB7tyOeiuPXBhbOdr_nGD8JkzAQ4cgj2s=s0-d-e1-ft#https://www.zaitoon.online/assets/images/elements/email_logo.png"><br></b></div><div><div><b style="color:rgb(224,102,102);font-family:tahoma,sans-serif;font-size:small">Mirchapur&nbsp;</b><font color="#666666" size="1"><b><br></b></font></div><div><font color="#666666" size="1"><b>Chennai - Madurai - Bangalore - Qatar</b></font></div></div><div style="font-size:12.8px"><font color="#e06666"><br></font></div><div style="font-size:12.8px"><span style="font-size:12.8px"><b><font color="#a64d79">Ph: +91 72999 29979</font></b></span><font color="#e06666"><br></font></div><div style="font-size:12.8px"><font color="#999999">www.zaitoon.restaurant | hello@zaitoon.restaurant</font></div><div><font color="#999999"><font size="1">362, Velachery Tambaram Main Road, Velachery, Chennai - 42</font></font></div></div></div></div></div>';
+	         		  var signature_template = '<div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><i style="font-size:12.8px"><font color="#999999">Thanks and Regards,</font></i><div style="font-size:12.8px"><font color="#999999"><i><br></i></font><div><div><font face="tahoma, sans-serif" color="#000000"><b>Mirchapur Customer Support</b></font></div><div><font color="#000000" face="tahoma, sans-serif">Mirchapur</font><br></div><div><font face="tahoma, sans-serif" color="#999999"><a href="http://www.foodbaxa.com" target="_blank">www.foodbaxa.com</a></font></div><div><br></div><div><br></div><div><br></div><div><b><img src="https://ci6.googleusercontent.com/proxy/oplDPYra6ukt8AZTG5UJ892dWrYb5IzTGWV0LWrKLSAM8TMjIKMuPVfEO748AlF_E6Wse7GTzzjm8XExs0wB7tyOeiuPXBhbOdr_nGD8JkzAQ4cgj2s=s0-d-e1-ft#https://foodbaxa.com/mirchapur/order/assets/images/elements/email_logo.png"><br></b></div><div><div><b style="color:rgb(224,102,102);font-family:tahoma,sans-serif;font-size:small">Mirchapur&nbsp;</b><font color="#666666" size="1"><b><br></b></font></div><div><font color="#666666" size="1"><b>Chennai - Madurai - Bangalore - Qatar</b></font></div></div><div style="font-size:12.8px"><font color="#e06666"><br></font></div><div style="font-size:12.8px"><span style="font-size:12.8px"><b><font color="#a64d79">Ph: +91 72999 29979</font></b></span><font color="#e06666"><br></font></div><div style="font-size:12.8px"><font color="#999999">www.foodbaxa.com | hello@foodbaxa.com</font></div><div><font color="#999999"><font size="1">B-80/1, 2nd Floor, Mayapuri Industrial Area Phase 1, New Delhi 110064</font></font></div></div></div></div></div>';
 	         		  
 	         		  var message_initial = $scope.replyMessage +'\n\n'+ signature_template;
 				  var message = message_initial.replace(new RegExp('\n','g'), '<br/>');
 				  var headers_obj =  {
-				      'From': 'Mirchapur Care <care@zaitoon.online>',
+				      'From': 'Mirchapur Care <hello@foodbaxa.com>',
 				      'To': $scope.replyEmail,
 				      'Subject': $scope.replySubject,
 				      'Content-Type': 'text/html; charset="UTF-8"',
@@ -464,7 +464,7 @@ angular.module('feedsApp', ['ngCookies', 'infinite-scroll'])
 
         //Refresh Badge Counts
         var admin_data = {};
-        admin_data.token = $cookies.get("zaitoonAdmin");
+        admin_data.token = $cookies.get("accelerateAdminCookie");
         $http({
           method  : 'POST',
           url     : 'https://accelerateengine.app/foodengine/services/fetchbadgecounts.php',

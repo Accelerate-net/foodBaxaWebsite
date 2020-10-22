@@ -812,10 +812,11 @@ header{
     color: #FFF;
     box-shadow: 2px 2px 1px 1px #463b3b69;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 120px;
         -webkit-animation-name: dimflash;
     animation-name: dimflash;
     animation: dimflash 2s infinite;
+    display: inline-block;
 }
 
 /* nav-toggler css start */

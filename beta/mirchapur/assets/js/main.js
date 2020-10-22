@@ -141,33 +141,6 @@ jQuery(document).ready(function () {
         }
     })
 
-
-
-    // init prettyphoto
-    jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
-        deeplinking: false,
-        social_tools: " ",
-        hook: 'data-rel',
-        animation_speed: 'fast',
-        /* fast/slow/normal */
-        slideshow: 5000,
-        /* false OR interval time in ms */
-        autoplay_slideshow: false,
-        /* true/false */
-        opacity: 0.75,
-        /* Value between 0 and 1 */
-        overlay_gallery: false,
-        show_title: true,
-        /* true/false */
-        allow_resize: true,
-        /* Resize the photos bigger than viewport. true/false */
-        counter_separator_label: '/',
-        /* The separator for the gallery counter 1 "of" 2 */
-        theme: 'pp_default',
-        /* pp_default / light_rounded / dark_rounded / light_square / dark_square / facebook */
-        horizontal_padding: 20 /* The padding on each side of the picture */
-    });
-
     // Direction-aware hover effect
     jQuery('.galleryContainer > li .inner ').each(function () {
         jQuery(this).hoverdir({

@@ -345,47 +345,20 @@ jQuery(document).ready(function () {
         })
     }
 
-    // ini tooltips
-    jQuery("[data-toggle='tooltip']").tooltip();
-
-    // progress bar animation
-
-    if (jQuery().appear) {
-        jQuery('.progress').appear(function () {
-            var $this = jQuery(this);
-            $this.each(function () {
-                var $innerbar = $this.find(".progress-bar");
-                var percentage = $innerbar.attr("data-percentage");
-
-                $innerbar.addClass("animating").css("width", percentage + "%");
-
-                $innerbar.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
-                    $innerbar.find(".pull-right").fadeIn(900);
-                });
-
-            });
-        }, {
-            accY: -100
-        });
-    }
-
-
-
-
-    // preloader
-    if (jQuery().queryLoader2) {
-        jQuery("body.preloader").queryLoader2({
-            backgroundColor: "#fff", //Background color of the loader (in hex).
-            barColor: "#584A41", //Background color of the bar (in hex).
-            barHeight: 3, //Height of the bar in pixels. Default: 1
-            deepSearch: true, //Set to true to find ALL images with the selected elements. If you don't want queryLoader to look in the children, set to false. Default: true.
-            percentage: true, //Set to true to enable percentage visualising. Default is false.
-            completeAnimation: "fade", //Set the animation type at the end. Options: "grow" or "fade". Default is "fade".
-            onComplete: function () {
-                jQuery("#ct_preloader").fadeOut(600);
-            }
-        });
-    }
+    // // preloader
+    // if (jQuery().queryLoader2) {
+    //     jQuery("body.preloader").queryLoader2({
+    //         backgroundColor: "#fff", //Background color of the loader (in hex).
+    //         barColor: "#584A41", //Background color of the bar (in hex).
+    //         barHeight: 3, //Height of the bar in pixels. Default: 1
+    //         deepSearch: true, //Set to true to find ALL images with the selected elements. If you don't want queryLoader to look in the children, set to false. Default: true.
+    //         percentage: true, //Set to true to enable percentage visualising. Default is false.
+    //         completeAnimation: "fade", //Set the animation type at the end. Options: "grow" or "fade". Default is "fade".
+    //         onComplete: function () {
+    //             jQuery("#ct_preloader").fadeOut(600);
+    //         }
+    //     });
+    // }
 
 
 })

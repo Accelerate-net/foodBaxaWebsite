@@ -238,10 +238,8 @@ p {
 }
 
 p.bigger {
-    font-size: 17px;
-    line-height: 23px;
-    margin-bottom: 20px;
-    letter-spacing: -0.01em;
+    font-size: 1.3em;
+    line-height: 1.5em;
     font-family: montserrat;
 }
 
@@ -745,10 +743,92 @@ header{
     transform: translateY(-3px) rotate(-45deg);
 }
 
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.3;
+  }
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.3;
+  }
+}
+
+.orderNowButton{
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    animation: flash 3s infinite;
+    color: #f44336 !important;
+    cursor: pointer !important;
+}
+
+@-webkit-keyframes dimflash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.8;
+  }
+}
+@keyframes dimflash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.8;
+  }
+}
+
+.orderNowButtonCenter{
+    visibility: hidden;
+    border: none;
+    padding: 10px 15px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 21px;
+    background: #f1950e;
+    border-radius: 8px;
+    color: #FFF;
+    box-shadow: 2px 2px 1px 1px #463b3b69;
+    cursor: pointer;
+    margin-top: 50px;
+        -webkit-animation-name: dimflash;
+    animation-name: dimflash;
+    animation: dimflash 2s infinite;
+}
+
 /* nav-toggler css start */
 
 /* mobile breakpoint start */
 @media screen and (max-width: 780px) {
+
+    .orderNowButtonCenter{
+        visibility: unset;
+    }
+
     .container {
         max-width: 720px;
     }
@@ -814,7 +894,7 @@ header{
 /* mobile breakpoint end */
 
 #home {
-    background-image: url(../images/bgmain1.png);
+    background-image: url(../images/cover-picture.png);
     background-size: cover;
     background-position: 50% 0;
     height: 100vh;
@@ -3986,35 +4066,3 @@ body.preloader #ct_preloader {
 
 
 
-@-webkit-keyframes flash {
-  from,
-  50%,
-  to {
-    opacity: 1;
-  }
-
-  25%,
-  75% {
-    opacity: 0.3;
-  }
-}
-@keyframes flash {
-  from,
-  50%,
-  to {
-    opacity: 1;
-  }
-
-  25%,
-  75% {
-    opacity: 0.3;
-  }
-}
-
-.orderNowButton{
-    -webkit-animation-name: flash;
-    animation-name: flash;
-    animation: flash 3s infinite;
-    color: #f44336 !important;
-    cursor: pointer !important;
-}

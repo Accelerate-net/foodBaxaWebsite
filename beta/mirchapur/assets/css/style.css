@@ -101,6 +101,7 @@ html {
 
 body {
     font-family: "A Love of Thunder", sans-serif;
+    /*overflow-x: hidden;*/
 }
 
 

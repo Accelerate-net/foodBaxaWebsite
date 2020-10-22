@@ -94,9 +94,9 @@ img {
 */
 
 html {
-    /* overflow-y: -moz-scrollbars-vertical;
+     overflow-y: -moz-scrollbars-vertical;
     overflow-y: scroll;
-    -ms-overflow-y: scroll; */
+    -ms-overflow-y: scroll; 
     /* scroll-behavior: smooth; */
 }
 

@@ -419,7 +419,7 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
             var extra_total = 0;
             var tax_central = 0;
             var tax_state = 0;
-            var extra_container = 0;
+            var extra_container = 29;
             
             if($scope.outletMeta.isCentralTaxCollected){
               tax_central = (sub_total*($scope.outletMeta.centralTaxPercentage)).toFixed(2);
@@ -429,14 +429,14 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
               tax_state = (sub_total*($scope.outletMeta.stateTaxPercentage)).toFixed(2);
             }
             
-            if($scope.outletMeta.isParcelCollected){
-              if($scope.isTakeAway){
-                extra_container = (sub_total*($scope.outletMeta.parcelPercentagePickup)).toFixed(2);
-              }
-              else{
-                extra_container = (sub_total*($scope.outletMeta.parcelPercentageDelivery)).toFixed(2);
-              }
-            }        
+            // if($scope.outletMeta.isParcelCollected){
+            //   if($scope.isTakeAway){
+            //     extra_container = (sub_total*($scope.outletMeta.parcelPercentagePickup)).toFixed(2);
+            //   }
+            //   else{
+            //     extra_container = (sub_total*($scope.outletMeta.parcelPercentageDelivery)).toFixed(2);
+            //   }
+            // }        
             
             extra_total = parseFloat(tax_central) + parseFloat(tax_state) + parseFloat(extra_container);
 	    extra_total = Math.round(extra_total);

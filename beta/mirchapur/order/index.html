@@ -2,18 +2,6 @@
 <html>
 <head>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38503881-9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-38503881-9');
-</script>
-
-
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Mirchapur Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +22,7 @@
 
     <!-- Custom CSS -->
     <link href="assets/css/zaitoon.min.css" rel="stylesheet">
+    <link href="assets/css/additional.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/apple-touch-icon-144-precomposed.png">
@@ -100,24 +89,6 @@ html {
     	}
     }
     
-    //One time clear - localstorage check (GST Changes)
-    if(localStorage.getItem("location") != "" && !getMyCookie("gstnewcache")){
-    	localStorage.removeItem("location");
-        localStorage.removeItem("isDeliveryAvailable");
-        localStorage.removeItem("isTakeAway");
-        localStorage.removeItem("outletInfo");
-        
-               //Set cookie
-               var d = new Date();
-               d.setTime(d.getTime() + 12960000000); //150 days
-               var expires = "expires="+ d.toUTCString();
-               document.cookie = "gstnewcache" + "=" + "GST_NEW_CACHE_CLEARED" + ";" + expires + ";path=/";
-               
-               window.location.reload(true);
-    
-    }
-    
-
     //Outlet data refresh - fetch latest outlet info    
     if(localStorage.getItem("location") != null && !getMyCookie("latestOutletFetch")){
         
@@ -224,7 +195,8 @@ html {
              if(data.status){
                document.getElementById("loginError").innerHTML = "";
                document.getElementById("loginButton").style.display = "none";
-               document.getElementById("otpRequest").innerHTML = '<div class="row"> <div class="col-sm-2"></div> <div class="col-sm-8"> <div style="width:100%" > <input class="typeahead" id="otpMobile" onkeyup="activateOtp()" style="width: 100%; font-size: 18px; font-weight: 300; text-align: center; height: 40px;" type="text" maxlength="4" placeholder="Enter the 4 digit OTP"> </div> </div> </div> <div class="row" style="padding-top: 20px"> <div class="col-sm-3"></div> <div class="col-sm-6"> <button class="btn btn-success" style="width: 100%;" id="otpButton" onclick="doOtp()" disabled>Log In</button> </div> </div> <div class="row" style="text-align: center"> <div class="col-sm-12"> <p id="otpError" style="padding: 2px 15px; color: #c52031"></p> </div> </div>';
+               var tempCode = data.response.tempCode;
+               document.getElementById("otpRequest").innerHTML = '<div class="row"> <div class="col-sm-2"></div> <div class="col-sm-8"> <div style="width:100%" > <input class="typeahead" id="otpMobile" onkeyup="activateOtp()" style="width: 100%; font-size: 18px; font-weight: 300; text-align: center; height: 40px;" type="text" maxlength="4" placeholder="Enter the 4 digit OTP" value="'+tempCode+'"> </div> </div> </div> <div class="row" style="padding-top: 20px"> <div class="col-sm-3"></div> <div class="col-sm-6"> <button class="btn btn-success" style="width: 100%;" id="otpButton" onclick="doOtp()">Log In</button> </div> </div> <div class="row" style="text-align: center"> <div class="col-sm-12"> <p id="otpError" style="padding: 2px 15px; color: #c52031"></p> </div> </div>';
                
                							//Additional Warnings
 							 	var warning = data.error;
@@ -400,7 +372,7 @@ html {
         var isTakeAway = false;
         var takeawayBar = '';
         if(localStorage.getItem("isTakeAway")){
-          isTakeAway = localStorage.getItem("isTakeAway");
+          isTakeAway = 'false'; //localStorage.getItem("isTakeAway");
           if(isTakeAway == 'true'){
             takeawayBar = '<div class="checkbox" style="color: #c52031; font-size: 16px;"> <label style="padding-left: 3px"> <input type="checkbox" value="" onclick="handleTick(this)" checked> <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span> Is it a Take Away? </label> </div>';
           }
@@ -477,7 +449,9 @@ html {
         
         var amountStateTax = 0;
         var amountCentralTax = 0;
-        var amountContainer = 0;        
+        var amountContainer = 29;     
+
+        isTakeAway = 'false';   
 
         if(!isOutletSet){
           if(isTakeAway == 'true'){
@@ -485,8 +459,8 @@ html {
               containerChargesRender = '<tr class="shipping-cost"> <td><grey>Delivery Charges (5%)</grey></td> <td><grey><i class="fa fa-inr"></i> '+amountContainer+'</grey></td> </tr>'
           }
           else {
-              amountContainer = (sub_total*.07).toFixed(2);
-              containerChargesRender = '<tr class="shipping-cost"> <td><grey>Delivery Charges (7%)</grey></td> <td><grey><i class="fa fa-inr"></i> '+amountContainer+'</grey></td> </tr>'
+              //amountContainer = (sub_total*.07).toFixed(2);
+              containerChargesRender = '<tr class="shipping-cost"> <td><grey>Delivery Charges</grey></td> <td><grey><i class="fa fa-inr"></i> '+amountContainer+'</grey></td> </tr>'
           }
         }
         else{
@@ -510,8 +484,8 @@ html {
               		containerChargesRender = '<tr class="shipping-cost"> <td><grey>Container Charges ('+Math.round(outletInfo.parcelPercentagePickup*100)+'%)</grey></td> <td><grey> <i class="fa fa-inr"></i> '+amountContainer+' </grey></td> </tr>';    
               	}
               	else{
-          		amountContainer = (sub_total*(outletInfo.parcelPercentageDelivery)).toFixed(2);
-              		containerChargesRender = '<tr class="shipping-cost"> <td><grey>Container Charges ('+Math.round(outletInfo.parcelPercentageDelivery*100)+'%)</grey></td> <td><grey> <i class="fa fa-inr"></i> '+amountContainer+' </grey></td> </tr>';                  	
+          		    amountContainer = 29; //(sub_total*(outletInfo.parcelPercentageDelivery)).toFixed(2);
+              		containerChargesRender = '<tr class="shipping-cost"> <td><grey>Delivery Charges</grey></td> <td><grey> <i class="fa fa-inr"></i> '+amountContainer+' </grey></td> </tr>';                  	
               	}          
           }
           
@@ -551,7 +525,7 @@ html {
         }
 
 
-        document.getElementById("cartArea").innerHTML = '<div style="max-height:220px; overflow-y:auto;" id="ScrollStyle"><table class="table table-condensed" style="margin-bottom: 0px; margin-top: -16px;"> <tbody></tbody> <colgroup> <col width="3%"> <col width="72%"> <col width="25%"> </colgroup> <tbody> '+row+' </tbody> </table></div><table class="table table-condensed" style="margin-bottom: -20px;"> <tbody> <tr> <td><grey>Cart Sub Total</grey></td> <td><grey><i class="fa fa-inr"></i> '+sub_total+'</grey></td> </tr> '+extras+' <tr> <td><red>Grand Total</red></td> <td><strong><red><span><i class="fa fa-inr"></i> '+grand_total+'</span></red></strong></td> </tr> </tbody> </table><hr>'+takeawayBar+checkoutButton;
+        document.getElementById("cartArea").innerHTML = '<div style="max-height:220px; overflow-y:auto;" id="ScrollStyle"><table class="table table-condensed" style="margin-bottom: 0px; margin-top: -16px;"> <tbody></tbody> <colgroup> <col width="3%"> <col width="72%"> <col width="25%"> </colgroup> <tbody> '+row+' </tbody> </table></div><table class="table table-condensed" style="margin-bottom: -20px;"> <tbody> <tr> <td><grey>Cart Sub Total</grey></td> <td><grey><i class="fa fa-inr"></i> '+sub_total+'</grey></td> </tr> '+extras+' <tr> <td><red>Grand Total</red></td> <td><strong><red><span><i class="fa fa-inr"></i> '+grand_total+'</span></red></strong></td> </tr> </tbody> </table><hr>'+checkoutButton;
        
         document.getElementById("fullCartArea").innerHTML = "";
         
@@ -680,11 +654,9 @@ html {
 
 
       function callSetLocation(){
-        if(localStorage.getItem("location")){
-          var temp = JSON.parse(localStorage.getItem("location"));
-          if(temp.location == null || temp.location == "" || !temp.location){
-            $('#warnLocation').modal('show');
-          }
+        var temp = JSON.parse(localStorage.getItem("location"));
+        if(temp == null || temp.location == null || temp.location == "" || !temp.location){
+          $('#warnLocation').modal('show');
         }
       }
       
@@ -879,7 +851,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		                  				</div>
 		                  				 -->
 		                  				<div class="__dd-sec-bottom" ng-show="popularAreasList.length > 0">
-			                    				<div class="__dropdown-head">POPULAR AREAS</div>
+			                    				<div class="__dropdown-head">SERVICEABLE AREAS</div>
 			                    				<div class="__top-cities">
 		                      					<tag class="popularLocation" style="display: inline-block;" ng-click="setLocationFromPopular(popular)" ng-repeat="popular in popularAreasList">{{popular.name}}</tag>
 		                  					</div>
@@ -1106,7 +1078,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <div ng-if="!i.isAvailable" class="btn-sm zaitoonNoStock" style="float: right">Out of Stock</div>
                                     </td>
                                     <td style="vertical-align: middle;" ng-if="!i.isCustom">
-                                        <button ng-if="i.isAvailable" class="btn btn-sm zaitoonAdd" ng-click="addToCart(i)" ng-attr-id="{{'dish_'+i.itemCode}}" style="float: right"> <span  ng-attr-id="{{'dish_name_'+i.itemCode}}">Add to Cart</span> </button>
+                                        <button ng-if="i.isAvailable" class="btn btn-sm zaitoonAdd" ng-click="addToCart(i)" ng-attr-id="{{'dish_'+i.itemCode}}" style="float: right"> <span  ng-attr-id="{{'dish_name_'+i.itemCode}}"><tag ng-attr-id="{{'dish_text_'+i.itemCode}}">Add to Cart</tag><tag ng-if="isAlreadyInCart(i) != 0" class="activeItemCountInCart">{{isAlreadyInCart(i)}}</tag></span> </button>
                                         <div ng-if="!i.isAvailable" class="btn-sm zaitoonNoStock" style="float: right">Out of Stock</div>
                                     </td>
                                 </tr>
@@ -1251,7 +1223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		                  				</div> -->
 		                  				
 		                  				<div class="__dd-sec-bottom" ng-show="popularAreasList.length > 0">
-			                    				<div class="__dropdown-head">POPULAR AREAS</div>
+			                    				<div class="__dropdown-head">SERVICEABLE AREAS</div>
 			                    				<div class="__top-cities">
 		                      					<tag class="popularLocation" style="display: inline-block;" ng-click="setLocationFromPopular(popular)" ng-repeat="popular in popularAreasList">{{popular.name}}</tag>
 		                  					</div>
@@ -1467,7 +1439,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="modal-footer" style="text-align: center;background: #FFFEE8; background-image: url(assets/images/common/pattern.jpg);background-repeat: repeat;">
                     <h4 style="color: #6b4312;"><strong>Not a member yet?</strong></h4>
                     <h6 style="color: #a71949;font-size: 14px;font-weight: 400;">Join the <b>Foodbaxa</b> family now and get awesome food on table on time!</h6>
-                    <a href="login/signup.html" <button="" type="button" class="btn btn-warning" style="background-color: transparent; color: #f5861f; border-color:  #f5861f">Signup Now!</a>
+                    <a href="login/signup.html" <button="" type="button" class="btn btn-warning" style="background-color: #b2314d; color: #FFF; border-color:  #b2314d">Signup Now</a>
                 </div>
             </div>
 

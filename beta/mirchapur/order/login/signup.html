@@ -99,7 +99,7 @@
 										 if(data.status){
 
 											 localStorage.setItem("temp_otp", data.response.otp);
-
+											 var tempCode = data.response.tempCode;
 
 											 document.getElementById("signupError").innerHTML = "";
 											 document.getElementById("signupButton").style.display = "none";
@@ -108,7 +108,7 @@
 											 document.getElementById("mobileLogin").style.display = "none";
 											 document.getElementById("emailLogin").style.display = "none";
 											 document.getElementById("nameLogin").style.display = "none";
-											 document.getElementById("otpRequest").innerHTML = '<input type="text" style="text-align: center" name="otp" id="loginOtp" placeholder="Enter OTP" />';
+											 document.getElementById("otpRequest").innerHTML = '<input type="text" style="text-align: center" name="otp" id="loginOtp" value="'+tempCode+'" placeholder="Enter OTP" />';
 											//Additional Warnings
 										 	var warning = data.error;
 										 	var timeLeft = 60;

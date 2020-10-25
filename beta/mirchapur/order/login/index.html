@@ -74,12 +74,14 @@
 					success: function(data) {
 					$('#loading').hide();
 						 if(data.status){
+						 	var tempCode = data.response.tempCode;
+
 							 document.getElementById("loginError").innerHTML = "";
 							 document.getElementById("loginButton").style.display = "none";
 							 document.getElementById("otpButton").style.display = "inherit";
 
 							 document.getElementById("mobileLogin").disabled = true;
-							 document.getElementById("otpRequest").innerHTML = '<input type="text" style="text-align: center" name="otp" id="loginOtp" placeholder="Enter OTP" />';		
+							 document.getElementById("otpRequest").innerHTML = '<input type="text" style="text-align: center" name="otp" id="loginOtp" value="'+tempCode+'" placeholder="Enter OTP" />';		
 							 	//Additional Warnings
 							 	var warning = data.error;
 							 	var timeLeft = 60;

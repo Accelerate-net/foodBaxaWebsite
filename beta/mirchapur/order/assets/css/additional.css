@@ -1,0 +1,11 @@
+.activeItemCountInCart{
+    position: absolute;
+    right: 4px;
+    top: 0;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.zaitoonAdd{
+	position: relative !important;
+}

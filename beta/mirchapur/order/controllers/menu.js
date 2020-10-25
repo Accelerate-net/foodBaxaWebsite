@@ -343,8 +343,8 @@ angular.module('FullMenu', ['gm', 'ngCookies'])
       $scope.closeLocation = function(){
       	$scope.isNewCitySet = false;
         $scope.newCityName = '';
-        document.getElementById('locationInput').value = "";
-        document.getElementById('remoteNewLocation').style.display = "none";        
+        //document.getElementById('locationInput').value = "";
+        //document.getElementById('remoteNewLocation').style.display = "none";        
         document.getElementById('myNewLocationWindow').style.display = "none";  
       }
       
@@ -370,15 +370,14 @@ angular.module('FullMenu', ['gm', 'ngCookies'])
       }
             
       $scope.setLocationFromPopular = function(popularObject){
-      
       	var temp = {};
       	temp.location = popularObject.originalName;
       	temp.locationCode = popularObject.code;
 	
-	localStorage.setItem("location", JSON.stringify(temp));
-	$scope.updateOutlet(popularObject.code);      	
- 	          	
-	$scope.closeLocation();
+		localStorage.setItem("location", JSON.stringify(temp));
+		$scope.updateOutlet(popularObject.code);      	
+	 	          	
+		$scope.closeLocation();
       }     
      
 	                          
@@ -468,6 +467,39 @@ angular.module('FullMenu', ['gm', 'ngCookies'])
     		return $scope.featureMenu.DESSERTS;
     	}    	
     }
+
+    //return count if item already in cart
+    $scope.isAlreadyInCart = function(item) {
+    	
+            var code = item.itemCode;
+
+            if(localStorage.getItem("itemsInfo") === null){
+                var temp = [];
+                localStorage.setItem("itemsInfo", JSON.stringify(temp));
+            }
+            var info = JSON.parse(localStorage.getItem("itemsInfo")); //getting items from localStorage
+            var i = 0;
+            var flag = -1;
+
+            while(i<info.length)
+            {
+                //checks if item aldready in cart and returns the position of that object if exists
+                if(info[i].itemCode==code)
+                {
+                    flag = i;
+                    break;
+                }
+                i++;
+            }
+
+
+            if(flag != -1){
+                var item = JSON.parse(localStorage.itemsInfo);
+                return item[flag].qty;
+            }            
+            
+            return 0;
+    }
     
     
 
@@ -506,17 +538,16 @@ angular.module('FullMenu', ['gm', 'ngCookies'])
                 oldItems.push(newItem);
                 var x = JSON.parse(localStorage.getItem("itemsInfo")) ;
                 localStorage.setItem('itemsInfo', JSON.stringify(oldItems));
-
             }                        
             
             //Animate
-            $("#dish_name_"+code).fadeOut(function(){
-                document.getElementById("dish_name_"+code).innerHTML = "<i class='fa fa-check'></i> Added";
-             	$("#dish_name_"+code).fadeIn(function(){
+            $("#dish_text_"+code).fadeOut(function(){
+                document.getElementById("dish_text_"+code).innerHTML = "<i class='fa fa-check'></i> Added";
+             	$("#dish_text_"+code).fadeIn(function(){
              		setTimeout(function(){                 	
-	             		$("#dish_name_"+code).fadeOut(function(){
-	             			document.getElementById("dish_name_"+code).innerHTML = "Add to Cart";
-	             			$("#dish_name_"+code).fadeIn();             		
+	             		$("#dish_text_"+code).fadeOut(function(){
+	             			document.getElementById("dish_text_"+code).innerHTML = "Add to Cart";
+	             			$("#dish_text_"+code).fadeIn();             		
 	             		});
 	             	}, 1000);              
             	});              

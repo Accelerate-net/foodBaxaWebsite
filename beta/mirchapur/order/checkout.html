@@ -143,16 +143,18 @@
         
         var amountStateTax = 0;
         var amountCentralTax = 0;
-        var amountContainer = 0;        
+        var amountContainer = 29;  
+
+        isTakeAway = 'false';      
 
         if(!isOutletSet){
           if(isTakeAway == 'true'){
-              amountContainer = (sub_total*.05).toFixed(2);
+              //amountContainer = (sub_total*.05).toFixed(2);
               containerChargesRender = '<tr class="shipping-cost"> <td><grey>Delivery Charges (5%)</grey></td> <td><grey><i class="fa fa-inr"></i> '+amountContainer+'</grey></td> </tr>'
           }
           else {
-              amountContainer = (sub_total*.07).toFixed(2);
-              containerChargesRender = '<tr class="shipping-cost"> <td><grey>Delivery Charges (7%)</grey></td> <td><grey><i class="fa fa-inr"></i> '+amountContainer+'</grey></td> </tr>'
+              //amountContainer = (sub_total*.07).toFixed(2);
+              containerChargesRender = '<tr class="shipping-cost"> <td><grey>Delivery Charges</grey></td> <td><grey><i class="fa fa-inr"></i> '+amountContainer+'</grey></td> </tr>'
           }
         }
         else{
@@ -172,12 +174,12 @@
           //Container Charges
           if(outletInfo.isParcelCollected){
           	if(isTakeAway == 'true'){          
-          		amountContainer = (sub_total*(outletInfo.parcelPercentagePickup)).toFixed(2);
+          		//amountContainer = (sub_total*(outletInfo.parcelPercentagePickup)).toFixed(2);
               		containerChargesRender = '<tr class="shipping-cost"> <td><grey>Container Charges ('+Math.round(outletInfo.parcelPercentagePickup*100)+'%)</grey></td> <td><grey> <i class="fa fa-inr"></i> '+amountContainer+' </grey></td> </tr>';    
               	}
               	else{
-          		amountContainer = (sub_total*(outletInfo.parcelPercentageDelivery)).toFixed(2);
-              		containerChargesRender = '<tr class="shipping-cost"> <td><grey>Container Charges ('+Math.round(outletInfo.parcelPercentageDelivery*100)+'%)</grey></td> <td><grey> <i class="fa fa-inr"></i> '+amountContainer+' </grey></td> </tr>';                  	
+          		//amountContainer = (sub_total*(outletInfo.parcelPercentageDelivery)).toFixed(2);
+              		containerChargesRender = '<tr class="shipping-cost"> <td><grey>Delivery Charges</grey></td> <td><grey> <i class="fa fa-inr"></i> '+amountContainer+' </grey></td> </tr>';                  	
               	}          
           }
           

@@ -30,7 +30,7 @@
 }
 
 #cartModal #mobileCartArea .mobileCheckoutBottomButton{
-    width: 100%;
+/*    width: 100%;
     box-shadow: none;
     border: none;
     background: #27ae60;
@@ -42,5 +42,5 @@
     font-weight: 400;
     border-radius: 0;
     left: 0;
-    outline: none;
+    outline: none;*/
 }

@@ -25,6 +25,7 @@
 
     <!-- Custom CSS -->
     <link href="assets/css/zaitoon.min.css" rel="stylesheet">
+    <link href="assets/css/additional.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/apple-touch-icon-144-precomposed.png">
@@ -62,16 +63,6 @@
 
     <script type="text/javascript">
     
-    //One time clear - localstorage check (GST Changes)
-    if(!getMyCookie("gstnewcheckout")){       
-               //Set cookie
-               var d = new Date();
-               d.setTime(d.getTime() + 12960000000); //150 days
-               var expires = "expires="+ d.toUTCString();
-               document.cookie = "gstnewcheckout" + "=" + "GST_NEW_CHECKOUT_CACHE_CLEARED" + ";" + expires + ";path=/";
-               
-               window.location.reload(true);    
-    }
     
       //Get Cookie Info.
       function getMyCookie(cname) {

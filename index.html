@@ -1,1 +1,81 @@
-Launching Soon!
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FoodBaxa</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body style="border-left: 10px solid #a72c1b; border-right: 10px solid #07a7b6;">
+        <div class="landingPage">
+            <div class="">
+                <center><img src="./assets/foodBaxa_logo.png" style="width: 150px; margin-top: 25px" alt="foodBaxa Logo"></center>
+            </div>
+            <div class="container">
+
+                <div class="twos-wrapper">
+                    <a href="./mirchapur/index.html" target="_blank" class="mainHomeButtons">
+                        <div class="mirchapur__wrapper">
+                            <div class="fort__wrapper animate__animated animate__fadeIn__faster">
+                                <img src="./assets/fort.png" alt="">
+                            </div>
+                            <div class="m_logo_wrapper ">
+                                <img src="./assets/mirchapur_logo.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <div id="division" class="animate__animated animate__fadeIn"></div>
+                    <a href="#" target="_blank" class="mainHomeButtons">
+
+                        <div class="tt_wrapper">
+                            <div class="world__wrapper animate__animated animate__fadeIn__faster">
+                                <img src="./assets/world.png" alt="">
+                            </div>
+                            <div class="tt_logo_wrapper">
+                                <img src="./assets/TT_logo.png" alt="">
+                                <span style="float: right; background: red; color: white; font-family: sans-serif; font-weight: bold; padding: 1px 4px; border-radius: 5px;">COMING SOON</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="icons_wrapper">
+                    <div id="show1" class="kitchen-wrapper" data-aos="fade-up" data-aos-once="true"
+                        data-aos-duration="1000" data-aos-delay="250" data-aos-easing="ease-in-out">
+                        <img src="./assets/icons/kitchen.png" class="bottomIconHover" alt="">
+                    </div>
+                    <div id="show2" class="mask-wrapper" data-aos="fade-up" data-aos-once="true"
+                        data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in-out">
+                        <img src="./assets/icons/mask.png" class="bottomIconHover" alt="">
+                    </div>
+                    <div id="show3" class="temp-wrapper" data-aos="fade-up" data-aos-once="true"
+                        data-aos-duration="1000" data-aos-delay="750" data-aos-easing="ease-in-out">
+                        <img src="./assets/icons/temp.png" class="bottomIconHover" alt="">
+                    </div>
+                    <div id="show4" class="contactless-wrapper" data-aos="fade-up" data-aos-once="true"
+                        data-aos-duration="1000" data-aos-delay="1000" data-aos-easing="ease-in-out">
+                        <img src="./assets/icons/contactless.png" class="bottomIconHover" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="script.js"></script>
+        <script>
+            AOS.init({
+                disable: function () {
+                    var maxWidth = 760;
+                    return window.innerWidth < maxWidth;
+                }
+            });
+        </script>
+    </body>
+
+</html>

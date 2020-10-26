@@ -507,14 +507,14 @@ html {
 
         var checkoutButton = '';
         if(isTakeAway == 'true'){
-          checkoutButton = '<div onclick="goCheckout()" style="text-decoration: none"><button class="btn btn-success btn-block">Check Out</button></div>';
+          checkoutButton = '<div onclick="goCheckout()" style="text-decoration: none"><button class="btn btn-success btn-block mobileCheckoutBottomButton">Place Order</button></div>';
         }
         else{
           if(grand_total >= min_value){
-            checkoutButton = '<div onclick="goCheckout()" style="text-decoration: none"><button class="btn btn-success btn-block">Check Out</button></div>';
+            checkoutButton = '<div onclick="goCheckout()" style="text-decoration: none"><button class="btn btn-success btn-block mobileCheckoutBottomButton">Place Order</button></div>';
           }
           else {
-            checkoutButton = '<div style="text-decoration: none"><button class="btn btn-success btn-block" disabled>Minimum Rs. '+min_value+' to Continue</button></div>';
+            checkoutButton = '<div style="text-decoration: none"><button class="btn btn-success btn-block mobileCheckoutBottomButton" disabled>Minimum Rs. '+min_value+' to Continue</button></div>';
           }
         }
 
@@ -1040,8 +1040,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		       	</div>		
 	                <div class="featureContent">              	              	                	          	
 	                	<p class="featureName">{{fItem.itemName}}</p>
-	                	<div class="btn btn-sm zaitoonAdd featureButton" ng-if="fItem.isAvailable && !fItem.isCustom" ng-attr-id="{{'dish_'+fItem.itemCode}}" ng-click="addToCart(fItem)"><span  ng-attr-id="{{'dish_name_'+fItem.itemCode}}">Add to Cart</span></div>
-	                	<button class="btn btn-sm zaitoonAdd featureButton open-AddCustomItemDialog" ng-if="fItem.isAvailable && fItem.isCustom" data-id="{{fItem}}" data-toggle="modal" data-target="#customiseItem" style="float: right">Add to Cart</button>
+	                	<div class="btn btn-sm zaitoonAdd featureButton" ng-if="fItem.isAvailable && !fItem.isCustom" ng-attr-id="{{'dish_'+fItem.itemCode}}" ng-click="addToCart(fItem)"><span  ng-attr-id="{{'dish_name_'+fItem.itemCode}}">Add</span></div>
+	                	<button class="btn btn-sm zaitoonAdd featureButton open-AddCustomItemDialog" ng-if="fItem.isAvailable && fItem.isCustom" data-id="{{fItem}}" data-toggle="modal" data-target="#customiseItem" style="float: right">Add</button>
 	                	<div class="btn-sm zaitoonNoStock featureButton" ng-if="!fItem.isAvailable">Out of Stock</div>
 	                </div>                
 		  </div>	  		  
@@ -1074,11 +1074,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <strong class="zaitoonItemPrice"><i class="fa fa-inr" style="font-size: 80%"></i> {{ i.itemPrice }}</strong>
                                     </td>
                                     <td style="vertical-align: middle;" ng-if="i.isCustom">
-                                        <button ng-if="i.isAvailable" class="btn btn-sm zaitoonAdd open-AddCustomItemDialog" data-id="{{i}}" data-toggle="modal" data-target="#customiseItem" style="float: right"> Add to Cart </button>
+                                        <button ng-if="i.isAvailable" class="btn btn-sm zaitoonAdd open-AddCustomItemDialog" data-id="{{i}}" data-toggle="modal" data-target="#customiseItem" style="float: right"> Add</button>
                                         <div ng-if="!i.isAvailable" class="btn-sm zaitoonNoStock" style="float: right">Out of Stock</div>
                                     </td>
                                     <td style="vertical-align: middle;" ng-if="!i.isCustom">
-                                        <button ng-if="i.isAvailable" class="btn btn-sm zaitoonAdd" ng-click="addToCart(i)" ng-attr-id="{{'dish_'+i.itemCode}}" style="float: right"> <span  ng-attr-id="{{'dish_name_'+i.itemCode}}"><tag ng-attr-id="{{'dish_text_'+i.itemCode}}">Add to Cart</tag><tag ng-if="isAlreadyInCart(i) != 0" class="activeItemCountInCart">{{isAlreadyInCart(i)}}</tag></span> </button>
+                                        <button ng-if="i.isAvailable" class="btn btn-sm zaitoonAdd" ng-click="addToCart(i)" ng-attr-id="{{'dish_'+i.itemCode}}" style="float: right"> <span  ng-attr-id="{{'dish_name_'+i.itemCode}}"><tag ng-attr-id="{{'dish_text_'+i.itemCode}}">Add</tag><tag ng-if="isAlreadyInCart(i) != 0" class="activeItemCountInCart">{{isAlreadyInCart(i)}}</tag></span> </button>
                                         <div ng-if="!i.isAvailable" class="btn-sm zaitoonNoStock" style="float: right">Out of Stock</div>
                                     </td>
                                 </tr>

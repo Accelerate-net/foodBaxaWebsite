@@ -546,7 +546,7 @@ angular.module('FullMenu', ['gm', 'ngCookies'])
              	$("#dish_text_"+code).fadeIn(function(){
              		setTimeout(function(){                 	
 	             		$("#dish_text_"+code).fadeOut(function(){
-	             			document.getElementById("dish_text_"+code).innerHTML = "Add to Cart";
+	             			document.getElementById("dish_text_"+code).innerHTML = "Add";
 	             			$("#dish_text_"+code).fadeIn();             		
 	             		});
 	             	}, 1000);              

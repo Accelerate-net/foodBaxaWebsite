@@ -8,4 +8,43 @@
 
 .zaitoonAdd{
 	position: relative !important;
+	text-transform: uppercase;
+}
+
+#cartModal{
+	z-index: 100000;
+}
+
+#cartModal .modal-dialog{
+	margin: 0 !important;
+}
+
+#cartModal .modal-content{
+	border: 0 !important;
+	height: 100vh !important;
+}
+
+#cartModal .modal-body{
+	padding: 25px 10px 0 10px !important;
+}
+
+#cartModal #mobileCartArea #ScrollStyle{
+	height: auto !important;
+	max-height: 65vh !important;
+}
+
+#cartModal #mobileCartArea .mobileCheckoutBottomButton{
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background: #27ae60;
+    color: #FFF;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 0;
+    left: 0;
+    outline: none;
 }

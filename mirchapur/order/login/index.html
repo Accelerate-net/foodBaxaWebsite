@@ -41,7 +41,7 @@
 
 		//Check if the user is Logged In
 		if(getCookie("user")){
-			window.location = "../index.html"
+			//window.location = "../index.html"
 		}
 
 		function getCookie(cname) {
@@ -61,7 +61,6 @@
 
 
 		function doLogin(){
-		console.log('Trying DO LOGIN');
 			var val = {};
 			val.mobile = Number(document.getElementById('mobileLogin').value);
 			$('#loading').show();

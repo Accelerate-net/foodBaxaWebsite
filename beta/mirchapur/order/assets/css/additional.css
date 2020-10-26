@@ -11,10 +11,6 @@
 	text-transform: uppercase;
 }
 
-#cartModal{
-	z-index: 100000;
-}
-
 #cartModal .modal-dialog{
 	margin: 0 !important;
 }

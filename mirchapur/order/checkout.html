@@ -572,7 +572,6 @@
                     <button ng-if="isPaymentPending && !isCOD" type="button" class="btn btn-warning check_out specialCheckoutButton" style="width: 100%; margin-top: 20px; border-radius: 0px; font-size: 16px;">Processing Payment</button>
                     <p style="padding-top: 5px; text-decoration: underline; text-align: center" ng-if="isPaymentPending && !isCOD" ng-click="restartOrder()">Retry Payment</p>
                     <button ng-if="isPaymentPending && isCOD" type="button" class="btn btn-warning check_out specialCheckoutButton" style="width: 100%; margin-top: 20px; border-radius: 0px; font-size: 16px;">Processing Order</button>
-                    <p id="orderAlert" style="color: #c52031; padding: 10px 0px"></p>
                 </div>
 
   
@@ -731,6 +730,11 @@
     </div>
 
 
+    <div id="snackbar"></div>
+
+
+
+
             </div>
         </div>
 
@@ -776,6 +780,7 @@
           }
         });
     </script>
+
 
 
 </body>

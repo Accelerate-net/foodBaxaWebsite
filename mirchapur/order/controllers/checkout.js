@@ -375,6 +375,13 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
     }
 
 
+      $scope.showToaster = function (text) {
+          var x = document.getElementById("snackbar");
+          x.innerHTML = text;
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      }
+
 
       //Order-Payment status
       $scope.isPaymentPending = false;
@@ -385,19 +392,19 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
         //Validate address
         $scope.isAddessPassed = false;
         if(checkoutAddress.name == "" && !$scope.isTakeAway){
-          document.getElementById("orderAlert").innerHTML = "Recepient Name can not be empty";
+          $scope.showToaster("Recepient Name can not be empty");
         }
         else if(checkoutAddress.flatNo == "" && !$scope.isTakeAway){
-          document.getElementById("orderAlert").innerHTML = "Flat No. can not be empty";
+          $scope.showToaster("Flat No. can not be empty");
         }
         else if(checkoutAddress.flatName == "" && !$scope.isTakeAway){
-          document.getElementById("orderAlert").innerHTML = "Flat Name can not be empty";
+          $scope.showToaster("Flat Name can not be empty");
         }
         else if(checkoutAddress.area == "" && !$scope.isTakeAway){
-          document.getElementById("orderAlert").innerHTML = "Locality Name can not be empty";
+          $scope.showToaster("Locality Name can not be empty");
         }
         else if(checkoutAddress.contact == "" && !$scope.isTakeAway){
-          document.getElementById("orderAlert").innerHTML = "Contact Number can not be empty";
+          $scope.showToaster("Contact Number can not be empty");
         }
         else{
 
@@ -493,7 +500,7 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
                     window.location="orderdetails.html";
                   }
                   else{
-                    document.getElementById("orderAlert").innerHTML = "";
+                    
                     //Online Payment
                     var temp_user = JSON.parse($cookies.get("user"));
                     var options = {
@@ -585,7 +592,7 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
                   }
                 }
                 else{
-                  document.getElementById("orderAlert").innerHTML = response.data.error;
+                  $scope.showToaster(response.data.error);
                 }
               });
             }

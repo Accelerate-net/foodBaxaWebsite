@@ -24,7 +24,10 @@
     border: none;
     border-radius: 2px;
     outline: none;
-    margin-left: 10px;
+    margin-left: 5px;
+    color: gray;
+    font-style: italic;
+    background: none;
 }
 
 #cartModal .yourCartText{

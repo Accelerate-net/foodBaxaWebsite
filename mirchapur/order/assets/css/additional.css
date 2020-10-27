@@ -193,3 +193,15 @@
   to {bottom: 0; opacity: 0;}
 }
 
+.goBackToMenuButton{
+    font-size: 14px;
+    background: none;
+    padding: 10px;
+    float: right;
+    font-family: sans-serif;
+    text-transform: none;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+}

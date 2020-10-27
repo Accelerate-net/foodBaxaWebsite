@@ -522,11 +522,11 @@ html {
 
         var checkoutButton = '';
         if(isTakeAway == 'true'){
-          checkoutButton = '<div onclick="goCheckout()" style="text-decoration: none"><button class="btn btn-success btn-block mobileCheckoutBottomButton">Place Order</button></div>';
+          checkoutButton = '<div onclick="goCheckout()" style="text-decoration: none"><button class="btn btn-success btn-block mobileCheckoutBottomButton">Checkout</button></div>';
         }
         else{
           if(grand_total >= min_value){
-            checkoutButton = '<div onclick="goCheckout()" style="text-decoration: none"><button class="btn btn-success btn-block mobileCheckoutBottomButton">Place Order</button></div>';
+            checkoutButton = '<div onclick="goCheckout()" style="text-decoration: none"><button class="btn btn-success btn-block mobileCheckoutBottomButton">Checkout</button></div>';
           }
           else {
             checkoutButton = '<div style="text-decoration: none"><button class="btn btn-success btn-block mobileCheckoutBottomButton" disabled>Minimum Rs. '+min_value+' to Continue</button></div>';

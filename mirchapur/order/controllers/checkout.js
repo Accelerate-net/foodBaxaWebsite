@@ -246,8 +246,6 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
     }
 
 
-
-
     $scope.myAddressList = "";
     $scope.initAddress = function(){    		
     		var data = {};
@@ -303,19 +301,10 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
     $scope.saveNewAddressToList = function(){
     	$scope.newError = "";
         if($scope.newAddressContent.name == ""){
-          $scope.newError = "Recepient Name can not be empty";
-        }
-        else if($scope.newAddressContent.flatNo == ""){
-          $scope.newError = "Flat No. can not be empty";
-        }
-        else if($scope.newAddressContent.flatName == ""){
-          $scope.newError = "Flat Name can not be empty";
-        }
-        else if($scope.newAddressContent.area == ""){
-          $scope.newError = "Locality Name can not be empty";
+          $scope.newError = "Please enter your name";
         }
         else if($scope.newAddressContent.contact == ""){
-          $scope.newError = "Contact Number can not be empty";
+          $scope.newError = "Please enter your Contact Number";
         }
         else{
         	$scope.newError = "";
@@ -339,12 +328,12 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
 	          	  
 	          	//Reset all the values
 	          	$scope.addNewAddressFlag = false;  
-		    	$scope.newAddressContent.name = "";
-		    	$scope.newAddressContent.flatNo = "";
-		    	$scope.newAddressContent.flatName = "";
-		    	$scope.newAddressContent.locality = "";
-		    	$scope.newAddressContent.area = "";
-		    	$scope.newAddressContent.contact = "";	          	        		          	                   	          	            
+    		    	$scope.newAddressContent.name = "";
+    		    	$scope.newAddressContent.flatNo = "";
+    		    	$scope.newAddressContent.flatName = "";
+    		    	$scope.newAddressContent.locality = "";
+    		    	$scope.newAddressContent.area = "";
+    		    	$scope.newAddressContent.contact = "";	          	        		          	                   	          	            
 	          }
 	          else{
 	            	$scope.newError = response.data.error;

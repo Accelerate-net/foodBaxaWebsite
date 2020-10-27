@@ -15,18 +15,39 @@
 	margin: 0 !important;
 }
 
+#cartModal .modal-header{
+  width: 100%;
+  padding: 10px 15px 0 15px !important;
+}
+
+#cartModal .clearCartButton{
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    margin-left: 10px;
+}
+
+#cartModal .yourCartText{
+    font-size: 21px;
+    padding-left: 20px;
+    font-weight: 300;
+    color: #c52031;
+    font-family: Oswald,sans-serif;
+    text-transform: uppercase;
+}
+
 #cartModal .modal-content{
 	border: 0 !important;
 	height: 100vh !important;
 }
 
 #cartModal .modal-body{
-	padding: 25px 10px 0 10px !important;
+	padding: 45px 10px 0 10px !important;
 }
 
 #cartModal #mobileCartArea #ScrollStyle{
 	height: auto !important;
-	max-height: 65vh !important;
+	max-height: 60vh !important;
 }
 
 #cartModal #mobileCartArea .mobileCheckoutBottomButton{

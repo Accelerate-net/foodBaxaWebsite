@@ -151,6 +151,11 @@ html {
     function openLogin(){
       $('#loginWindow').modal('show');      
     }
+
+    function resetCart(){
+      localStorage.setItem("itemsInfo", JSON.stringify([]));
+      window.location.reload(true);  
+    }
              
 
 
@@ -506,8 +511,8 @@ html {
 
         //Calculate Grand Total:
         var grand_total = 0;
-	grand_total = parseFloat(sub_total) + parseFloat(amountStateTax) + parseFloat(amountCentralTax) + parseFloat(amountContainer);
-	grand_total = Math.round(grand_total);
+      	grand_total = parseFloat(sub_total) + parseFloat(amountStateTax) + parseFloat(amountCentralTax) + parseFloat(amountContainer);
+      	grand_total = Math.round(grand_total);
 
         //Minimum order value
         var min_value = 200;
@@ -1084,7 +1089,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <strong class="zaitoonItemPrice"><i class="fa fa-inr" style="font-size: 80%"></i> {{ i.itemPrice }}</strong>
                                     </td>
                                     <td style="vertical-align: middle;" ng-if="i.isCustom">
-                                        <button ng-if="i.isAvailable" class="btn btn-sm zaitoonAdd open-AddCustomItemDialog" data-id="{{i}}" data-toggle="modal" data-target="#customiseItem" style="float: right"> Add</button>
+                                        <button ng-if="i.isAvailable" class="btn btn-sm zaitoonAdd open-AddCustomItemDialog" data-id="{{i}}" data-toggle="modal" data-target="#customiseItem" style="float: right"> Add<tag ng-if="isAlreadyInCart(i) != 0" class="activeItemCountInCart">{{isAlreadyInCart(i)}}</tag></button>
                                         <div ng-if="!i.isAvailable" class="btn-sm zaitoonNoStock" style="float: right">Out of Stock</div>
                                     </td>
                                     <td style="vertical-align: middle;" ng-if="!i.isCustom">
@@ -1197,7 +1202,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Modal content-->
         <div class="modal-content" style="border-radius: 0px">
                 <div class="modal-header" style="position: absolute; top:0; right: 0; z-index: 2; border: none">
-                    <!----><button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-if="!isUnavoidable"><span aria-hidden="true">×</span></button><!---->
+                    <tag class="yourCartText">Your Cart</tag>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-if="!isUnavoidable"><span aria-hidden="true">×</span></button>
+                    <button class="clearCartButton" onclick="resetCart()">Clear Cart</button>
                 </div>
           <div class="modal-body" style="text-align: left">
           	<div id="mobileCartArea"><center><img src="assets/images/common/spinner.svg" style="width: 25%"></center></div>

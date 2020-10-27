@@ -381,19 +381,10 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
         //Validate address
         $scope.isAddessPassed = false;
         if(checkoutAddress.name == "" && !$scope.isTakeAway){
-          $scope.showToaster("Recepient Name can not be empty");
-        }
-        else if(checkoutAddress.flatNo == "" && !$scope.isTakeAway){
-          $scope.showToaster("Flat No. can not be empty");
-        }
-        else if(checkoutAddress.flatName == "" && !$scope.isTakeAway){
-          $scope.showToaster("Flat Name can not be empty");
-        }
-        else if(checkoutAddress.area == "" && !$scope.isTakeAway){
-          $scope.showToaster("Locality Name can not be empty");
+          $scope.showToaster("Please enter your name");
         }
         else if(checkoutAddress.contact == "" && !$scope.isTakeAway){
-          $scope.showToaster("Contact Number can not be empty");
+          $scope.showToaster("Please enter yout Contact Number");
         }
         else{
 
@@ -435,7 +426,7 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
             // }        
             
             extra_total = parseFloat(tax_central) + parseFloat(tax_state) + parseFloat(extra_container);
-	    extra_total = Math.round(extra_total);
+	           extra_total = Math.round(extra_total);
             
 
             var cart = {

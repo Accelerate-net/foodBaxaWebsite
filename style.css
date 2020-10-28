@@ -391,3 +391,30 @@ body{
         width: 70px;
     }
 }
+
+.orderNowButtonLanding{
+    background: #4CAF50;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.comingSoonFilter img{
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.comingSoonLabel{
+    background: #FF9800;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 400;
+    padding: 4px 6px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: inline-block;
+}

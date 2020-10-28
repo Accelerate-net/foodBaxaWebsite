@@ -227,3 +227,7 @@
   float: right;
   display: inline-block;
 }
+
+.modifyOrCancelButton{
+  color: red;
+}

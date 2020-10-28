@@ -237,7 +237,9 @@
     <div class="container bs-docs-container specialOrderHolder" ng-if="!isFaked">
         <div class="row">
             <div class="col-sm-12">
-            <h2 class="zaitoonMenuHead"><high style="font-size: 18px;"><status ng-if="item.status =='0'" style="border: 1px solid #f39c12; color: #f39c12; padding: 5px 10px;" class="blinking">Awaiting Confirmation by Mirchapur</status><status ng-if="item.status =='1'" style="border: 1px solid #2ecc71; color: #2ecc71; padding: 5px 10px;">Order is Confirmed</status><status ng-if="item.status =='2'" style="border: 1px solid #2ecc71; color: #2ecc71; padding: 5px 10px;">Order is Dispatched</status> <status ng-if="item.status =='5'" style="border: 1px solid #c52031; color: #c52031; padding: 5px 10px;">Order is Cancelled</status></high><tag class="pull-right trackOrderNo"><id class="pull-right">#{{item.orderID}}</id></tag></h2>
+            <h2 class="zaitoonMenuHead"><high style="font-size: 18px;"><status ng-if="item.status =='0'" style="border: 1px solid #f39c12; color: #f39c12; padding: 5px 10px;" class="blinking">Awaiting Confirmation by Mirchapur</status><status ng-if="item.status =='1'" style="border: 1px solid #2ecc71; color: #2ecc71; padding: 5px 10px;">Order is Confirmed</status><status ng-if="item.status =='2'" style="border: 1px solid #2ecc71; color: #2ecc71; padding: 5px 10px;">Order is Dispatched</status> <status ng-if="item.status =='5'" style="border: 1px solid #c52031; color: #c52031; padding: 5px 10px;">Order is Cancelled</status></high><tag class="pull-right trackOrderNo"><id class="pull-right">#{{item.orderID}}</id></tag>
+            <a href="tel:+919643787876" ng-if="item.status =='0' || item.status =='1'" class="modifyOrCancelButton">Modify / Cancel</a>
+            </h2>
             <hr style="border-top: 2px solid #c52031; margin-top: 5px;">
             </div>
 
@@ -260,8 +262,8 @@
                 <div style="margin-top: 20px" ng-if="!isTakeAway">
                   <h6 class="zaitoonMenuHead" style="font-size: 12px">DELIVERY ADDRESS</h6>
                   <p style="margin-top: -5px;"><b>{{address.name}}</b><br>
-                    {{address.flatNo}}, {{address.flatName}}, <br>
-                    <tag ng-if="address.landmark != ''">{{address.landmark}},<br></tag>
+                    {{address.flatNo}} {{address.flatName}}<br>
+                    <tag ng-if="address.landmark != ''">{{address.landmark}}<br></tag>
                     {{address.area}}<br>
                   <tag class="fa fa-phone"> {{address.contact}}</tag></p>
                 </div>
@@ -304,7 +306,7 @@
                     </div>
 
                         <div class="col-sm-12" style="border-top: 1px dashed #34495e; border-bottom: 1px solid #34495e;">
-                            <p class="specialOrderPrices" style="padding-right: 65px; padding-top: 10px; text-align:right">Delivery Charges : <i class="fa fa-inr"></i> {{cart.cartExtra}}<br>Discounts : <i class="fa fa-inr"></i> {{cart.cartDiscount}}</p>
+                            <p class="specialOrderPrices" style="padding-right: 65px; padding-top: 10px; text-align:right">Taxes + Other Charges : <i class="fa fa-inr"></i> {{cart.cartExtra}}<br>Discounts : <i class="fa fa-inr"></i> {{cart.cartDiscount}}</p>
                         </div>
                         <div class="col-sm-12" style="border-bottom: 1px solid #34495e;">
                             <h4 class="pull-right specialOrderPrices" style="padding-right: 60px;">Grand Total : <red><i class="fa fa-inr"></i> {{cart.cartTotal + cart.cartExtra}}</red></h4>

@@ -380,7 +380,7 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
 
       $scope.checkout = function(checkoutAddress, comments, coupon){
 
-        //Validate address
+        //Validate addresses
         $scope.isAddessPassed = false;
         if(checkoutAddress.name == "" || checkoutAddress.contact == "" || !$scope.isAddressSet){
           $scope.showToaster("Please add your complete delivery address");

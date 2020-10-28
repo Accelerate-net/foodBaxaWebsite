@@ -382,7 +382,7 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
 
         //Validate address
         $scope.isAddessPassed = false;
-        if(checkoutAddress.name == "" || checkoutAddress.contact == "" || !isAddressSet){
+        if(checkoutAddress.name == "" || checkoutAddress.contact == "" || !$scope.isAddressSet){
           $scope.showToaster("Please add your complete delivery address");
         }
         else{

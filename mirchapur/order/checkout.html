@@ -401,9 +401,9 @@
                                     <td></td>
                                     <td><b class="CheckOutSubHead">Delivery Address</b>
                                     <span class="btn btn-sm btn-success zaitoonAdd" style="float: right" ng-click="openSavedAddress()">Select Addresses</span>
-                                      <div class="row row-horizon" style="padding: 5px 15px">
-                                          <p ng-if="!isAddressSet">Add your address</p>
-                                          <div class="col-sm-8 featuredItem"  style="padding: 10px" ng-if="isAddressSet">
+                                      <div class="row row-horizon" style="padding: 0">
+                                          <p ng-if="!isAddressSet" style="font-style: italic; color: gray;">Add your address</p>
+                                          <div class="col-xs-8 col-md-8 col-sm-8 featuredItem"  style="padding: 10px" ng-if="isAddressSet">
                                               <p class="featureName">
                                                   {{checkoutAddress.name}}<br>
                                                   {{checkoutAddress.flatNo}}, {{checkoutAddress.flatName}}<br>

@@ -204,6 +204,13 @@
 }
 
 .goBackToMenuButton{
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    color: #FFF;
+    background: #c51f30;
+    font-size: 14px;
+    padding: 5px 10px;
     font-size: 14px;
     background: none;
     padding: 10px;

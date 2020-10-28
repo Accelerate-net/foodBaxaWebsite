@@ -400,42 +400,18 @@
                                 <tr style="background: white;">
                                     <td></td>
                                     <td><b class="CheckOutSubHead">Delivery Address</b>
-                                    <span class="btn btn-sm btn-success zaitoonAdd" style="float: right" ng-click="openSavedAddress()">See Saved Addresses</span>
-                                      <div class="row">
-                                        <div class="col-sm-12">
-                                          <div class="form-group" style="margin-bottom: 5px;">
-                                            <input type="text" class="form-control checkOutFields checkOutIn" id="" placeholder="Recepient Name" ng-model="checkoutAddress.name">
+                                    <span class="btn btn-sm btn-success zaitoonAdd" style="float: right" ng-click="openSavedAddress()">Select Addresses</span>
+                                      <div class="row row-horizon" style="padding: 5px 15px">
+                                          <p ng-if="!isAddressSet">Add your address</p>
+                                          <div class="col-sm-8 featuredItem"  style="padding: 10px" ng-if="isAddressSet">
+                                              <p class="featureName">
+                                                  {{checkoutAddress.name}}<br>
+                                                  {{checkoutAddress.flatNo}}, {{checkoutAddress.flatName}}<br>
+                                                  {{checkoutAddress.landmark}}<br>
+                                                  {{checkoutAddress.area}}<br>
+                                                  Mob. {{checkoutAddress.contact}}
+                                              </p>
                                           </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                          <div class="form-group">
-                                            <input type="text" class="form-control checkOutFields checkOutIn" id="" placeholder="Mobile Number" ng-model="checkoutAddress.contact">
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-6">
-                                          <div class="form-group" style="margin-bottom: 5px;">
-                                            <input type="text" class="form-control checkOutFields checkOutIn" id="" placeholder="Flat/House No." ng-model="checkoutAddress.flatNo">
-                                          </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                          <div class="form-group" style="margin-bottom: 5px;">
-                                            <input type="text" class="form-control checkOutFields checkOutIn" id="" placeholder="Flat/House Name" ng-model="checkoutAddress.flatName">
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-6">
-                                          <div class="form-group" style="margin-bottom: 5px;">
-                                            <input type="text" class="form-control checkOutFields checkOutIn" id="" placeholder="Landmark" ng-model="checkoutAddress.landmark">
-                                          </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                          <div class="form-group">
-                                            <input type="text" class="form-control checkOutFields checkOutIn" id="" placeholder="Locality" ng-model="checkoutAddress.area">
-                                          </div>
-                                        </div>
                                       </div>
                                     </td>
                                 </tr>
@@ -549,7 +525,7 @@
             <div class="col-md-3 checkoutSpecialCart">
                 <div class="" role="complementary" style="margin-bottom: 30px">
                     <ul class="nav bs-sidenav myCartMain" style="border-radius: 0px">
-                    <h3 class="z_cartTitle">Your Cart<button class="goBackToMenuButton" onclick="goBackToMenu()"><i class="fa fa-pencil"></i>Modify Cart</button></h3>
+                    <h3 class="z_cartTitle">Your Cart<button class="goBackToMenuButton" onclick="goBackToMenu()"><i class="fa fa-pencil"></i> Modify Cart</button></h3>
                     <hr style="margin-bottom: 0px">
                         <div id="cartArea" class="mycartArea">
                         	<center><img src="assets/images/common/spinner.svg" style="width: 25%"></center>

@@ -278,11 +278,13 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
    
     }
 
+    $scope.isAddressSet = false;
 
     //Copy from the saved address
     $scope.copyThisAddress = function(address){    
-	$('#addressSuggestions').modal('hide');	
-	$scope.checkoutAddress = address;
+	     $('#addressSuggestions').modal('hide');	
+	     $scope.checkoutAddress = address;
+       $scope.isAddressSet = true;
     }   
     
     $scope.addNewAddressFlag = false;
@@ -312,7 +314,7 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
     		data.token = JSON.parse($cookies.get("user")).token;
     		data.address = $scope.newAddressContent;
     	
-    	       $('#loading').show();
+    	   $('#loading').show();
 	       $http({
 	        method  : 'POST',
 	        url     : 'https://accelerateengine.app/foodengine/services/newaddress.php',
@@ -380,11 +382,8 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
 
         //Validate address
         $scope.isAddessPassed = false;
-        if(checkoutAddress.name == "" && !$scope.isTakeAway){
-          $scope.showToaster("Please enter your name");
-        }
-        else if(checkoutAddress.contact == "" && !$scope.isTakeAway){
-          $scope.showToaster("Please enter yout Contact Number");
+        if(checkoutAddress.name == "" || checkoutAddress.contact == "" || !isAddressSet){
+          $scope.showToaster("Please add your complete delivery address");
         }
         else{
 

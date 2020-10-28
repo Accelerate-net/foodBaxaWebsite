@@ -229,5 +229,16 @@
 }
 
 .modifyOrCancelButton{
-  color: red;
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: initial;
+    font-weight: bold;
+    text-transform: initial;
+    padding: 15px;
+}
+
+@media (min-width:768px){
+  .modifyOrCancelButton{
+    display: block;
+  }
 }

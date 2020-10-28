@@ -22,12 +22,22 @@
 
 #cartModal .clearCartButton{
     border: none;
-    border-radius: 2px;
+    border-radius: 3px;
     outline: none;
-    margin-left: 5px;
-    color: gray;
-    font-style: italic;
-    background: none;
+    color: #FFF;
+    background: #c51f30;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+#cartModal .closeCartButton{
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    color: #FFF;
+    background: #c51f30;
+    font-size: 14px;
+    padding: 5px 10px;
 }
 
 #cartModal .yourCartText{
@@ -204,4 +214,9 @@
     outline: none;
     margin-right: 10px;
     cursor: pointer;
+}
+
+.cartMobileControls{
+  float: right;
+  display: inline-block;
 }

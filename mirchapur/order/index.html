@@ -832,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="navbar navbar-fixed-top bs-docs-nav" role="banner" >
         <div class="container">
             <div class="navbar-header" >
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <button class="navbar-toggle myNavbarButton" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <i class="fa fa-bars"></i>
                 </button>
@@ -1203,8 +1203,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="modal-content" style="border-radius: 0px">
                 <div class="modal-header" style="position: absolute; top:0; right: 0; z-index: 2; border: none">
                     <tag class="yourCartText">Your Cart</tag>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-if="!isUnavoidable"><span aria-hidden="true">×</span></button>
-                    <button class="clearCartButton" onclick="resetCart()"><i class="fa fa-undo"></i> Clear Cart</button>
+
+                    <div class="cartMobileControls">
+                      <button class="clearCartButton" onclick="resetCart()"><i class="fa fa-undo"></i> Clear Cart</button>
+                      <button class="closeCartButton" data-dismiss="modal" aria-label="Close" ng-if="!isUnavoidable"><i class="fa fa-chevron-left"></i> Menu</button>
+                  </div>
                 </div>
           <div class="modal-body" style="text-align: left">
           	<div id="mobileCartArea"><center><img src="assets/images/common/spinner.svg" style="width: 25%"></center></div>
@@ -1516,6 +1519,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           document.getElementById('helpComment').onkeyup = function(){
             document.getElementById('helpCommentLimit').innerHTML =   (500-(this.value.length))+ ' characters left.';
           }
+        });
+
+        $(document).ready(function () {
+            $(document).click(function (event) {
+                var clickover = $(event.target);
+                var _opened = $(".navbar-collapse").attr("aria-expanded");
+                if (_opened === 'true' && !clickover.hasClass("myNavbarButton")) {
+                    $("button.myNavbarButton").click();
+                }
+            });
         });
     </script>
 

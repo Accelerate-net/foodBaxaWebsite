@@ -196,7 +196,7 @@
     <header class="navbar navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
             <div class="navbar-header" >
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <button class="navbar-toggle myNavbarButton" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <i class="fa fa-bars"></i>
                 </button>
@@ -410,6 +410,16 @@
           document.getElementById('helpComment').onkeyup = function(){
             document.getElementById('helpCommentLimit').innerHTML =   (500-(this.value.length))+ ' characters left.';
           }
+        });
+
+                $(document).ready(function () {
+            $(document).click(function (event) {
+                var clickover = $(event.target);
+                var _opened = $(".navbar-collapse").attr("aria-expanded");
+                if (_opened === 'true' && !clickover.hasClass("myNavbarButton")) {
+                    $("button.myNavbarButton").click();
+                }
+            });
         });
     </script>
 

@@ -235,10 +235,11 @@
     font-weight: bold !important;
     text-transform: initial !important;
     padding: 0 15px !important;
+    display: block !important;
 }
 
 @media (min-width:768px){
   .modifyOrCancelButton{
-    display: block !important;
+    display: inline-block !important;
   }
 }

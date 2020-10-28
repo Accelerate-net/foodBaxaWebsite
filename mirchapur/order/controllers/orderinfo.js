@@ -51,8 +51,8 @@ angular.module('OrderInfo',['ngRoute', 'ngCookies'])
         $scope.init();
 
         //Repeated Pooling of Track Page
-        $interval(function () {
-          $scope.init();
-        }, 20000);
+        // $interval(function () {
+        //   $scope.init();
+        // }, 20000);
 
     }]);

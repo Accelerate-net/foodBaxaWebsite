@@ -522,7 +522,7 @@
             </div>
 
 
-            <div class="col-md-3 checkoutSpecialCart">
+            <div class="col-md-3 checkoutSpecialCart" style="padding-bottom: 40px;">
                 <div class="" role="complementary" style="margin-bottom: 30px">
                     <ul class="nav bs-sidenav myCartMain" style="border-radius: 0px">
                     <h3 class="z_cartTitle">Your Cart<button class="goBackToMenuButton" onclick="goBackToMenu()"><i class="fa fa-pencil"></i> Modify Cart</button></h3>
@@ -538,7 +538,7 @@
                       <a href="deals.html"><span class="checkOffers animate__heartBeat">Check Offers</span></a>
                       <b class="CheckOutSubHead">Apply Coupon</b>
                       <div class="input-group" style="margin-top: 10px">
-                          <input id="couponCode" type="text" class="form-control couponIn" placeholder="Coupon Code" ng-model="coupon" ng-keyup="invalidateCoupon()" aria-describedby="basic-addon2">
+                          <input id="couponCode" type="text" class="form-control couponIn" placeholder="Coupon Code" ng-model="coupon" ng-keyup="invalidateCoupon()" aria-describedby="basic-addon2" style="text-transform: uppercase;">
                           <span class="input-group-addon" ng-click="applyCoupon(coupon)" id="basic-addon2">Apply</span>
                       </div>
                       <p ng-if="isCouponApplied" style="padding-top: 5px;">
@@ -570,7 +570,7 @@
                
 		<!-- Featured Items -->
 		<div class="row row-horizon" style="padding: 5px 15px">
-		  <div class="col-sm-5 featuredItem"  style="padding: 10px" ng-repeat="address in myAddressList track by $index">	            	              	                	          	
+		  <div class="col-xs-6 col-sm-5 featuredItem"  style="padding: 10px" ng-repeat="address in myAddressList track by $index">	            	              	                	          	
 	                <p class="featureName">
 	                		{{address.name}}<br>
 	                		{{address.flatNo}}, {{address.flatName}}<br>

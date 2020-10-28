@@ -192,6 +192,7 @@ angular.module('CheckOut', ['ngRoute', 'ngCookies'])
 
 
     $scope.applyCoupon = function(coupon){
+      coupon = coupon.toUpperCase();
     if(!$scope.isCouponApplied){
       var data = {};
       data.token = JSON.parse($cookies.get("user")).token;

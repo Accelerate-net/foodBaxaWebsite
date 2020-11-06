@@ -254,13 +254,10 @@ angular.module('promotionsApp', ['ngCookies'])
 			if(mm<10) {mm = '0'+mm;}
 			var mytoday = yyyy+mm+dd;
 			
-			if(formatDate($scope.newCoupon.expiry) < mytoday){
-				$scope.saveError = "Add a futuristic expiry date";			
-			}
-			else{ // No errors, good to go.
-				$scope.newCoupon.expiryDate = $scope.newCoupon.expiry;
-				$('#confirmationModal').modal('show');
-			}
+			
+  				$scope.newCoupon.expiryDate = $scope.newCoupon.expiry;
+	   			$('#confirmationModal').modal('show');
+			
 			
 			    function formatDate(date) {
 		           	//Expecing date in DD-MM-YYYY and returns YYYYMMDD

@@ -467,14 +467,11 @@ $scope.initVouchers();
 			var mytoday = yyyy+''+mm+''+dd;
 			
 			var myformattedDate = formatDate($scope.newVoucherContent.date);
-			if(myformattedDate < mytoday){
-				$scope.newVoucherError = "Add a futuristic expiry date";			
-			}
-			else{ // No errors, good to go.
-				$scope.userName = $scope.newVoucherContent.mobile;				
-				$('#voucherModal').modal('hide');
-				$('#confirmVoucherModal').modal('show');
-			}
+
+			$scope.userName = $scope.newVoucherContent.mobile;				
+			$('#voucherModal').modal('hide');
+			$('#confirmVoucherModal').modal('show');
+			
 			
 			function formatDate(date) {
 		           	//Expecing date in DD-MM-YYYY and returns YYYYMMDD

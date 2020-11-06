@@ -401,9 +401,6 @@ angular.module('marketingApp', ['ngCookies'])
 		      	else if($scope.addNewContent.brief == ""){
 		      		$scope.newContentSaveError = "Add a short description for the coupon";
 		      	}
-		      	else if($scope.addNewContent.expiry == "" || $scope.addNewContent.expiry < todayDate){
-		      		$scope.newContentSaveError = "Add a futuristic expiry date";
-		      	}
 		      	else{
 		      		//Add to server
 		      		$scope.newContentSaveError = "";
@@ -449,9 +446,6 @@ angular.module('marketingApp', ['ngCookies'])
 		
 			if($scope.addNewContent.brief == ""){
 		      		$scope.newContentSaveError = "Add a description";
-		      	}
-		      	else if($scope.addNewContent.expiry == "" || $scope.addNewContent.expiry < todayDate){
-		      		$scope.newContentSaveError = "Add a futuristic expiry date";
 		      	}
 		      	else if(!$scope.addNewContent.offer && $scope.myPhotoURL == "" ){
 		      		$scope.newContentSaveError = "Promotion must have a photo attachment";
@@ -508,9 +502,6 @@ angular.module('marketingApp', ['ngCookies'])
 		      	}
 		      	else if($scope.addNewContent.price == "" || $scope.addNewContent.price < 1 || isNaN($scope.addNewContent.price)){
 		      		$scope.newContentSaveError = "Invalid Price";
-		      	}
-		      	else if($scope.addNewContent.expiry == "" || $scope.addNewContent.expiry < todayDate){
-		      		$scope.newContentSaveError = "Add a futuristic expiry date";
 		      	}
 		      	else{
 		      		//Add to server
